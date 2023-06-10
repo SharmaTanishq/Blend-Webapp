@@ -1,0 +1,36 @@
+.csContainer{
+  background-color: white;
+  min-height: 75vh;
+  max-width: 1300px;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1300px;
+  
+}
+.csWrapper{
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  color: #343a40;
+}
+.msImage{
+  flex: 3 1;
+  margin-right: 4.5rem;
+}
+.msImage img{
+  height: auto;
+  max-width: 100%;
+}
+.msContent{
+  flex: 3 1;
+  margin-right: 6rem;
+}
