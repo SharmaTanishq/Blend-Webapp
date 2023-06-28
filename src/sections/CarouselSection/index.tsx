@@ -3,6 +3,7 @@ import Image from 'next/image'
 import ImageTwo from '../../../public/sample.png'
 import styles from './index.module.css'
 import { Button } from '@/components'
+
 type Props = {}
 
 const index = (props: Props) => {

@@ -6,9 +6,9 @@ type Props = {}
 const index = (props: Props) => {
   return (
     <>
-    <footer className=" max-w-screen-lg py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
-        <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>.
+    <footer className=" w-full py-8 text-center text-sm bg-[#211735]">
+        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made for{' '}
+        <a href="https://www.blend.com">Blend</a>.
         {/*
          * PLEASE READ THIS SECTION
          * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.

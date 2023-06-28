@@ -4,7 +4,21 @@ type Props = {}
 
 const index = (props: Props) => {
   return (
-    <div>Explore section</div>
+    <div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+        
+      </div>
+
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import {FaInstagram , FaFacebook} from 'react-icons/fa'
 
 type Props = {}
 
@@ -55,15 +56,15 @@ const index = (props: Props) => {
                 href="/blog/"
                 className="no-underline text-white"
               >
-                Logo
+                <FaInstagram/>
               </Link>
             </li>
             <li className="mr-6 hover:border-b-4 hover:border-b-white ">
               <Link
                 href="/blog/"
-                className="no-underline text-white"
-              >
-                Logo
+                className="no-underline text-white text-xl"
+               >
+                  <FaFacebook/>
               </Link>
             </li>
           </ul>

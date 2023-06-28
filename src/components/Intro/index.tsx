@@ -35,7 +35,7 @@ const index = (props: Props) => {
             />
     </h1>
     <h3 className='text-[2rem] text-white font-semibold mb-2'>
-        The social app and members club for music lovers
+        Ready to find your Ride or Die?
     </h3>
     <Button text='Join the club'/>
     
