@@ -1,6 +1,7 @@
 import React from 'react'
 import { HeroCard, Intro } from '../../components';
-import carousel from '../../../public/carousel.json'
+import {carousel} from '../../../public/carousel'
+import {carouselTwo} from '../../../public/carouselTwo'
 import Marquee from 'react-fast-marquee'
 
 type Props = {}
@@ -34,7 +35,7 @@ const index = (props: Props) => {
         speed={5}
         direction='right'
          className='pt-2 mt-4 max-w-full'>
-            {carousel.map((item,index) =>
+            {carouselTwo.map((item,index) =>
             <HeroCard {...item} key={index} />
             )}
         </Marquee>

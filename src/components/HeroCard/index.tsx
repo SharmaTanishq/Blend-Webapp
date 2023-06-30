@@ -24,7 +24,7 @@ type Props = {
 const index = (props: Props) => {
   return (
     <div className={styles.heroCard}>
-      <img className={styles.heroCardImg} src={"https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg"}></img>
+      <img className={styles.heroCardImg} src={props.backgroundImage}></img>
 
       {/* Toggle for enable/disable the corner logo */}
       { props.logoVisible? 

@@ -1,6 +1,8 @@
-[
+
+
+export const carousel = [
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": '/images/Talwinder.jpg',
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "bg-primary",
@@ -18,7 +20,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage":"images/Party.JPG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -36,7 +38,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage":"images/Diljit.JPG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -54,7 +56,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Clubbing.JPG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -72,7 +74,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/AP.PNG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -90,7 +92,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Festival.JPG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -108,7 +110,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Drake.PNG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -126,7 +128,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Weeknd.PNG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#96f",
@@ -144,7 +146,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Dj.JPG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -162,7 +164,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Metro-Spider.webp",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -180,7 +182,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/Heroes-Villains.jpeg",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -198,7 +200,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/FourYou.jpeg",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -216,7 +218,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage":"images/shubh.jpeg",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -234,7 +236,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/ClubbingTwo.JPG",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -252,7 +254,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage":"images/JohnMayer.webp",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -270,7 +272,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage": "images/SZA.png",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
@@ -288,7 +290,7 @@
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
   },
   {
-    "backgroundImage": "https://www.beatmatch.app/static/media/waitlist-member-1.bad6f793f74aa0421d86.jpeg",
+    "backgroundImage":"images/Tomorrowland.jpeg",
     "logoVisible": true,
     "logoIcon": "./heart.png",
     "logoBackground": "#ffffff",
