@@ -18,7 +18,7 @@ const Main = (props: IMainProps) => (
       <section className='pt-3 pb-5'><MeetSimilarSection/></section>
       <section className='pt-2 pb-2 bg-primary'><MarqueeBanner/></section>
       <section className='bg-white'><CarouselSection/></section>
-      <section><ExploreSection/></section>
+      <section className='pt-5 pb-3'><ExploreSection/></section>
 
       <Footer/>
     </div>
