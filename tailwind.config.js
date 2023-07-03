@@ -5,6 +5,7 @@ module.exports = {
     minHeight:{
       'section-height':"87.5vh"
     },
+    
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
@@ -16,6 +17,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '8xl': '6.5rem',
     },
     extend: {
       colors: {
@@ -41,7 +43,9 @@ module.exports = {
           800: '#2c5282',
           900: '#2a4365',
         },
+      
         primary:"#96f",
+        primaryWhite:"#fff",
         background:"#060710"
       },
     },
