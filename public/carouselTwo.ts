@@ -4,7 +4,7 @@ export const carouselTwo = [
   {
     "backgroundImage": '/images/Talwinder.jpg',
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "bg-primary",
     "isSongVisible": false,
     "songName": "chosen",
@@ -22,7 +22,7 @@ export const carouselTwo = [
   {
     "backgroundImage":"images/Party.JPG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -40,7 +40,7 @@ export const carouselTwo = [
   {
     "backgroundImage":"images/Diljit.JPG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -58,7 +58,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Clubbing.JPG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -76,7 +76,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/AP.PNG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -94,7 +94,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Festival.JPG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -112,7 +112,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Drake.PNG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -130,7 +130,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Weeknd.PNG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#96f",
     "isSongVisible": true,
     "songName": "chosen",
@@ -148,7 +148,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Dj.JPG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -166,7 +166,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Metro-Spider.webp",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -184,7 +184,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/Heroes-Villains.jpeg",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -202,7 +202,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/FourYou.jpeg",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -220,7 +220,7 @@ export const carouselTwo = [
   {
     "backgroundImage":"images/shubh.jpeg",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -238,7 +238,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/ClubbingTwo.JPG",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -256,7 +256,7 @@ export const carouselTwo = [
   {
     "backgroundImage":"images/JohnMayer.webp",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -274,7 +274,7 @@ export const carouselTwo = [
   {
     "backgroundImage": "images/SZA.png",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
@@ -292,7 +292,7 @@ export const carouselTwo = [
   {
     "backgroundImage":"images/Tomorrowland.jpeg",
     "logoVisible": true,
-    "logoIcon": "./heart.png",
+    "logoIcon": 1,
     "logoBackground": "#ffffff",
     "isSongVisible": true,
     "songName": "chosen",
