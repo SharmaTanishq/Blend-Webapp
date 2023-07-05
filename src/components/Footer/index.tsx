@@ -1,20 +1,31 @@
 import { AppConfig } from '@/utils/AppConfig'
 import React from 'react'
+import {
+  FaInstagram,
+  FaTwitter,
+  FaFacebookF,
+  FaYoutube,
+  FaSpotify
+} from 'react-icons/fa'
+import { Subscribe } from '..'
 
 type Props = {}
 
 const index = (props: Props) => {
   return (
     <>
-    <footer className=" w-full py-8 text-center text-sm bg-[#060710]">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made for{' '}
-        <a href="https://www.blend.com">Blend</a>.
-        {/*
-         * PLEASE READ THIS SECTION
-         * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.
-         * The link doesn't need to appear on every pages, one link on one page is enough.
-         * For example, in the `About` page. Thank you for your support, it'll mean a lot to me.
-         */}
+    <footer className=" flex justify-center items-center w-full py-8 text-center text-sm bg-[#060710] p-5 h-auto">
+        <div className='flex max-w-7xl max-h-80 h-full min-h-[324px] justify-between items-center min-w-[60%]'>
+          <div className='text-white text-4xl'>Blend</div>
+          <div><Subscribe/></div>
+          <div className='flex text-white text-3xl'>
+            <FaInstagram className='mr-5'/>
+            <FaFacebookF className='mr-5'/>
+            <FaTwitter className='mr-5'/>
+            <FaYoutube className='mr-5'/>
+            <FaSpotify/>
+          </div>
+        </div>
       </footer>
     </>
   )
