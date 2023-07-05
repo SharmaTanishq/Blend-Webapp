@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import {FaInstagram , FaFacebook} from 'react-icons/fa'
+import { ButtonSecondary } from '..'
 
 type Props = {}
 
@@ -54,7 +55,7 @@ const index = (props: Props) => {
             <li className="mr-6 hover:border-b-4 hover:border-b-white ">
               <Link
                 href="/blog/"
-                className="no-underline text-white"
+                className="no-underline text-white text-3xl"
               >
                 <FaInstagram/>
               </Link>
@@ -62,12 +63,23 @@ const index = (props: Props) => {
             <li className="mr-6 hover:border-b-4 hover:border-b-white ">
               <Link
                 href="/blog/"
-                className="no-underline text-white text-xl"
+                className="no-underline text-white text-3xl"
                >
                   <FaFacebook/>
               </Link>
             </li>
+            <div>
+               <ButtonSecondary 
+               marginBottom='mb-0'
+               marginTop='mt-0'
+               text="Join The Club"
+               textColor='text-[#9966ff]'
+               background='bg-primaryWhite'
+               minWidth='min-w-[150px]'
+               ></ButtonSecondary>
+            </div>
           </ul>
+         
           </div>
         </nav>
       </header>

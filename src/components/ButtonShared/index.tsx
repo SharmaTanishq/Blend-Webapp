@@ -5,6 +5,8 @@ type Props = {
   background:string;
   minWidth:string;
   marginRight?:string;
+  marginBottom?:string;
+  marginTop?:string;
   textColor:string;
 }
 
@@ -24,8 +26,10 @@ const index = (props: Props) => {
     ${props.textColor}
     font-semibold
     ${props.marginRight?props.marginRight:''}
-    mb-4
-    mt-6
+    ${props.marginBottom?props.marginBottom:'mb-4'}
+    ${props.marginTop?props.marginTop:' mt-6'}
+    
+   
     text-base
     `}>
       {props.text}

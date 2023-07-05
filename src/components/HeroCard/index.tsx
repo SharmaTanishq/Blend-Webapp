@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from  './index.module.css'
-
+import {FaRegHeart} from 'react-icons/fa'
+import {BiPlus} from 'react-icons/bi'
+import {BsBookmark} from 'react-icons/bs'
+import {VscSend} from 'react-icons/vsc'
 type Props = {
   backgroundImage:string;
   logoVisible:Boolean;
-  logoIcon:string;
+  logoIcon:number;
   logoBackground:string;
   isSongVisible:Boolean;
   songName:string;
@@ -22,6 +25,27 @@ type Props = {
 
 
 const index = (props: Props) => {
+  const icon =(selection:number) =>{
+    if(selection === 1){
+      return (<>
+        <FaRegHeart/>
+      </>)
+    } if(selection === 2){
+      return (<>
+        <BiPlus/>
+      </>)
+    }
+    if(selection === 3){
+      return (<>
+        <BsBookmark/>
+      </>)
+    }
+    return (
+    <div className='mb-1 ml-1'>
+      <VscSend className='-rotate-45 	'/>
+    </div>
+    )
+  }
   return (
     <div className={styles.heroCard}>
       <img className={styles.heroCardImg} src={props.backgroundImage}></img>
@@ -30,7 +54,9 @@ const index = (props: Props) => {
       { props.logoVisible? 
       <div className={styles.topRightLogo}>
         <div className={styles.iconHolder} style={{background:props.logoBackground}}>
-          <div className='icon'></div>
+          <div className='icon text-2xl justify-center items-center flex h-full w-full'>
+            {icon(props.logoIcon)}
+          </div>
         </div>
       </div>:null}
 

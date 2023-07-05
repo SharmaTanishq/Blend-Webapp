@@ -6,7 +6,7 @@ type Props = {}
 const index = (props: Props) => {
   return (
     <>
-    <footer className=" w-full py-8 text-center text-sm bg-[#211735]">
+    <footer className=" w-full py-8 text-center text-sm bg-[#060710]">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Made for{' '}
         <a href="https://www.blend.com">Blend</a>.
         {/*
