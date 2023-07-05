@@ -317,7 +317,7 @@ export const carouselOne = [
 
 export const carouselTwo = [
   {
-    "backgroundImage": '/images/BadshahKaran.jpeg',
+    "backgroundImage": '/images/bk.jpeg',
     "logoVisible": false,
     "logoIcon": 1,
     "logoBackground": "bg-primary",

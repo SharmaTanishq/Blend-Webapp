@@ -7,6 +7,7 @@ import {
   carousel_two
 } from '../../../public/carousel'
 import Marquee from 'react-fast-marquee'
+import styles from './index.module.css'
 
 type Props = {}
 
@@ -23,10 +24,14 @@ const index = (props: Props) => {
         <Intro />        
       </div>     
       <div className='flex mt-8 h-full w-full' >
-         {/* @ts-ignore */}
+       
         <Marquee 
         speed={5}
+        gradient={true}
+        gradientColor={[0, 0, 1]}
+        gradientWidth={50}
         className='pt-2 max-w-full'>
+          
             {carousel.map((item,index) =>
               <HeroCard {...item} key={index}  />
             )}
@@ -37,10 +42,13 @@ const index = (props: Props) => {
       
       </div>
       <div className='flex h-full w-full' >
-         {/* @ts-ignore */}
+        
         <Marquee
         speed={5}
         direction='right'
+        gradient={true}
+        gradientColor={[0, 0, 1]}
+        gradientWidth={50}
          className='pt-2 mt-4 max-w-full'>
             {carouselTwo.map((item,index) =>
             <HeroCard {...item} key={index} />

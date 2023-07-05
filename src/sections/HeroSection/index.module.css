@@ -1,0 +1,7 @@
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    --gradient-color: rgba(0, 0, 0, 1), rgba(0, 0, 0, 0);
+    --gradient-width: 50px;
+}
