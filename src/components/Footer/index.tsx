@@ -15,7 +15,7 @@ const index = (props: Props) => {
   return (
     <>
     <footer className=" flex justify-center items-center w-full py-8 text-center text-sm bg-[#060710] p-5 h-auto">
-        <div className='flex max-w-7xl max-h-80 h-full min-h-[324px] justify-between items-center min-w-[60%]'>
+        <div className='flex flex-col lg:flex-row  max-w-7xl max-h-80 h-full min-h-[324px] justify-between items-center min-w-[60%]'>
           <div className='text-white text-4xl'>Blend</div>
           <div><Subscribe/></div>
           <div className='flex text-white text-3xl'>
