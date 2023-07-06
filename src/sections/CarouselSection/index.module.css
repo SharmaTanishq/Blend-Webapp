@@ -51,3 +51,34 @@
  
   
 }
+
+@media screen and (max-width: 768px) {
+  .csContainer{
+    
+    padding-left: 0;
+    
+    background-image: url('.././../../public/blob.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80px 10px;
+    
+  }
+ 
+  .csWrapper{
+   width: 100%;
+   flex-direction: column;
+   justify-content: center;
+  }
+  .msImage{
+   justify-content: center;
+   padding-bottom: 2rem;
+  }
+  .msImage{
+   flex: 3 1;
+   margin-right: 0;
+ }
+ .msContent{
+   flex: 3 1;
+   margin-right: 0;
+ }
+ }

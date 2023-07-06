@@ -150,24 +150,7 @@ export const carousel = [
 
 export const carouselOne = [
   
-  {
-    "backgroundImage": "images/Dj.JPG",
-    "logoVisible": false,
-    "logoIcon": 1,
-    "logoBackground": "#ffffff",
-    "isSongVisible": false,
-    "songName": "chosen",
-    "songArtistName": "Bixst,Ty Dolla $ign",
-    "songArtistImage": "https://www.beatmatch.app/static/media/highlights-blxst-chosen.ebb29c5925e63dd2a7f3.jpeg",
-    "isGenreVisible": false,
-    "genre": "EDM",
-    "isArtistTopVisible": false,
-    "isArtistBottomVisible": false,
-    "artistImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg",
-    "isFestVisible": false,
-    "festTag": "Festival",
-    "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
-  },
+  
   {
     "backgroundImage": "images/Metro-Spider.webp",
     "logoVisible": false,

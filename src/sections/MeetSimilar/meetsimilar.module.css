@@ -33,3 +33,22 @@
   flex: 3 1;
   margin-right: 6rem;
 }
+
+@media screen and (max-width: 768px) {
+ .msWrapper{
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+ }
+ .msImage{
+  justify-content: center;
+ }
+ .msImage{
+  flex: 3 1;
+  margin-right: 0;
+}
+.msContent{
+  flex: 3 1;
+  margin-right: 0;
+}
+}
