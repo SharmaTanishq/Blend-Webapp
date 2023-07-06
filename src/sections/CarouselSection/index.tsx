@@ -9,7 +9,10 @@ type Props = {}
 const index = (props: Props) => {
   return (
     <div className={styles.csContainer} >
+      <div className={styles.justBlur}>
       <div className={styles.csWrapper}>
+        
+       
         <div className={styles.msContent}>
           <h1 className='text-[3.5rem] leading-tight font-bold	mb-4	'>Meet people with similar music tastes</h1>
           <p className='text-xl	font-normal leading-snug'>Finding your new boo or bestie is hard. Especially when 
@@ -21,6 +24,8 @@ const index = (props: Props) => {
           <Image src={ImageTwo} alt='Sample Image'></Image>
         </div>
       </div>
+      </div>
+      
     </div>
   )
 }

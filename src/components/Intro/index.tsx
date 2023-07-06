@@ -6,8 +6,8 @@ type Props = {}
 
 const index = (props: Props) => {
   return (
-    <div className='flex flex-col justify-center items-center'>
-    <h1 className='text-[5.5rem] text-white font-semibold'>Play music. Find
+    <div className='flex flex-col justify-center items-center text-center'>
+    <h1 className='text-[3.5rem] max-w-sm leading-tight lg:text-[5.5rem] lg:max-w-none  text-white font-semibold '>Play music. Find
     <TypeIt
               options={{
                 loop:true
