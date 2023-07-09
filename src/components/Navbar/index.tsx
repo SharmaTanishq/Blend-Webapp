@@ -18,25 +18,30 @@ const index = (props: Props) => {
     
   ];
   const [scroll,setScroll] = useState(false);
-  
-  useEffect(()=>{
+  const changeNav = () =>{
     if(window.scrollY >=80){
-      setScroll(true);
+        setScroll(true);
     } else{
         setScroll(false);
     }
-    console.log("Scroll",scroll)
+}
+  
+  useEffect(()=>{
+    changeNav()
+    window.addEventListener("scroll",changeNav);
   },[])
 
+
+  
   
   let [open,setOpen]=useState(false);
 
   return (
-    <nav className={`shadow-md  w-full fixed top-0 left-0 z-[999]`}>
+    <nav className={`${scroll?'bg-white':'bg-none'} shadow-md  w-full fixed top-0 left-0 z-[999] transition-all duration-500 ease-in`}>
       <div className={`md:flex max-w-7xl mx-auto items-center justify-between ${open?'bg-white':'bg-none'} py-4 md:px-10 px-7 transition-all duration-500 ease-in `}>
         <div className='font-bold text-2xl cursor-pointer flex items-center
         text-gray-800'>
-          <span className='text-3xl text-white font-semibold mr-1 pt-2'>
+          <span className={`text-3xl ${open||scroll?'text-gray-800 text-center':'text-white'} font-semibold mr-1 pt-2`}>
           
           Blend
           </span>
@@ -45,14 +50,14 @@ const index = (props: Props) => {
     
     <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
      {/* <ion-icon name={open ? 'close':'menu'}></ion-icon> */}
-     {open ? <div className='text-primary'><FaTimes/></div>:<div className='text-white'><FaBars/></div>}
+     {open ? <div className='text-primary'><FaTimes/></div>:<div className={`${scroll?'text-primary':'text-white'}`}><FaBars/></div>}
     </div>
 
     <ul className={` md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-50 left-0 w-full justify-end md:pl-0  transition-all duration-500 ease-in ${open ? 'top-20 bg-white':'top-[-490px] '}`}>
       {
         Links.map((link)=>(
           <li key={link.name} style={{textDecoration:'none'}} className='md:ml-8 text-xl md:my-0 my-7 '>
-            <Link style={{textDecoration:'none'}}  href={link.link} className={`${open?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-[#96f]  duration-500`}><h1>{link.name}</h1></Link>
+            <Link style={{textDecoration:'none'}}  href={link.link} className={`${open||scroll?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-[#96f]  duration-500`}><h1>{link.name}</h1></Link>
           </li>
         ))
       }
@@ -60,7 +65,7 @@ const index = (props: Props) => {
           <li className="md:ml-8 text-4xl md:my-0 my-7 ">
               <Link
                 href="/blog/"
-                className={`${open?'text-gray-800':'text-white'} cursor-pointer hover:text-[#96f]  duration-500`}
+                className={`${open||scroll?'text-gray-800':'text-white'} cursor-pointer hover:text-[#96f]  duration-500`}
               >
                 <FaInstagram/>
               </Link>
@@ -68,7 +73,7 @@ const index = (props: Props) => {
           <li className="md:ml-8 md:my-0 my-7 text-4xl mr-4">
               <Link
                 href="/blog/"
-                className={`${open?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-[#96f]  duration-500`}
+                className={`${open||scroll?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-[#96f]  duration-500`}
                >
                   <FaFacebook/>
               </Link>
@@ -78,8 +83,8 @@ const index = (props: Props) => {
                marginBottom='mb-0'
                marginTop='mt-0'
                text="Join The Club"
-               textColor={`${open?'text-white':'text-[#9966ff]'}`}
-               background={`${open?'bg-primary':'bg-primaryWhite'}`}
+               textColor={`${open||scroll?'text-white':'text-[#9966ff]'}`}
+               background={`${open||scroll?'bg-primary':'bg-primaryWhite'}`}
                minWidth={`${open?'max-w-[280px] ml-12 ':'max-w-[150px]'}`}
                ></ButtonSecondary>
       </ul>

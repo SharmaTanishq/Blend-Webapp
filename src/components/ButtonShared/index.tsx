@@ -13,8 +13,7 @@ type Props = {
 const index = (props: Props) => {
   return (
     <button className={`
-    ${props.minWidth}
-    max-w-sm 
+    ${props.minWidth} 
     w-full 
     max-h-11 
     flex 
@@ -28,8 +27,6 @@ const index = (props: Props) => {
     ${props.marginRight?props.marginRight:''}
     ${props.marginBottom?props.marginBottom:'mb-4'}
     ${props.marginTop?props.marginTop:' mt-6'}
-    
-   
     text-base
     `}>
       {props.text}
