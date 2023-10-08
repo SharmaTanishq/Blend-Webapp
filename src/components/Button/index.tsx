@@ -2,11 +2,16 @@ import React from 'react'
 
 type Props = {
   text:string
+  onClick?:()=>void
 }
 
 const index = (props: Props) => {
   return (
-    <button className='max-w-sm 
+    <button 
+    type='button'
+    onClick={props.onClick}
+    className='max-w-sm 
+    shadow-custom
     w-full 
     max-h-11 
     flex 

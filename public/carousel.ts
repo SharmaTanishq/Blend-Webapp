@@ -6,7 +6,7 @@ export const carousel = [
     "logoVisible": false,
     "logoIcon": 1,
     "logoBackground": "bg-primary",
-    "isSongVisible": false,
+    "isSongVisible": true,
     "songName": "chosen",
     "songArtistName": "Bixst,Ty Dolla $ign",
     "songArtistImage": "https://www.beatmatch.app/static/media/highlights-blxst-chosen.ebb29c5925e63dd2a7f3.jpeg",

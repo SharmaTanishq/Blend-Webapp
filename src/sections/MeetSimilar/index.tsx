@@ -20,7 +20,7 @@ const index = (props: Props) => {
             <a>
               <b>deal breaker</b>
             </a>
-            . With Beatmatch, we do the work for you. You play music; we find your match.
+            . With Blend, we do the work for you. You play music; we find your match.
           </p>
           <Button text="Let's Play"/>
         </div>

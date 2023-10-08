@@ -30,7 +30,7 @@ const index = (props: Props) => {
         gradient={true}
         gradientColor={[0, 0, 1]}
         gradientWidth={50}
-        className='pt-2 max-w-full'>
+        className='pt-2 max-w-full overflow-hidden'>
           
             {carousel.map((item,index) =>
               <HeroCard {...item} key={index}  />
@@ -49,7 +49,7 @@ const index = (props: Props) => {
         gradient={true}
         gradientColor={[0, 0, 1]}
         gradientWidth={50}
-         className='pt-2 mt-4 max-w-full'>
+         className='pt-2 mt-4 max-w-full overflow-hidden'>
             {carouselTwo.map((item,index) =>
             <HeroCard {...item} key={index} />
             )}

@@ -27,6 +27,13 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.2",
+    "@types/aos": "^3.0.4",
+    "@types/spotify-web-api-node": "^5.0.7",
+    "aos": "^2.3.4",
+    "graphql": "^16.8.0",
+    "graphql-tag": "^2.12.6",
+    "jquery": "^3.7.1",
     "next": "^13.4.1",
     "next-seo": "^6.0.0",
     "next-sitemap": "^4.0.9",
@@ -34,6 +41,9 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.0",
     "react-icons": "^4.10.1",
+    "react-owl-carousel": "^2.3.3",
+    "react-useanimations": "^2.10.0",
+    "spotify-web-api-node": "^5.0.2",
     "typeit-react": "^2.6.4"
   },
   "devDependencies": {

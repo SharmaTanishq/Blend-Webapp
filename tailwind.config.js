@@ -36,6 +36,9 @@ module.exports = {
       '8xl': '6.5rem',
     },
     extend: {
+      boxShadow:{
+        'custom':" 0px 4px 12px rgba(0, 0, 0, 0.1)"
+      },
       colors: {
         gray: {
           100: '#f7fafc',
@@ -60,9 +63,10 @@ module.exports = {
           900: '#2a4365',
         },
       
-        primary:"#96f",
+        primary:"#CE0141",
         primaryWhite:"#fff",
-        background:"#060710"
+        background:"#060710",
+        error:"#B00020"
       },
     },
     screens: {

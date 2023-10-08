@@ -1,5 +1,6 @@
 
 .heroCard{
+  overflow: hidden;
   margin-right: 20px;
   height: 18.75rem;
   position: relative;
@@ -9,7 +10,7 @@
 @media screen and (max-width: 768px) {
   .heroCard{
     height: 11rem;
-   
+    
     width: 9.16rem;
   }
 }

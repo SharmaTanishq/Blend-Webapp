@@ -8,11 +8,14 @@ type Props = {
   marginBottom?:string;
   marginTop?:string;
   textColor:string;
+  onClick?:()=>any
 }
 
 const index = (props: Props) => {
   return (
-    <button className={`
+    <button 
+    onClick={props.onClick}
+    className={`
     ${props.minWidth} 
     w-full 
     max-h-11 

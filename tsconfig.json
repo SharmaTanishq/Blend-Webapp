@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    
+
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "removeComments": true,
@@ -19,7 +19,7 @@
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
 
-    "target": "es5",
+    "target": "ES2015",
     "outDir": "out",
     "declaration": true,
     "sourceMap": true,
@@ -38,7 +38,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "@queries/*": ["./src/graphql/queries/*"],
+      "@mutations/*": ["./src/graphql/mutations/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
