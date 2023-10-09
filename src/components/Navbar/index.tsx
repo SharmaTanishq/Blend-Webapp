@@ -173,7 +173,7 @@ useEffect(()=>{
                marginTop='mt-0'
                onClick={() => connectSpotify()}
                text="Connect Spotify"
-               textColor={`${open||scroll?'text-white':'text-[#9966ff]'}`}
+               textColor={`${open||scroll?'text-white':'text-primary'}`}
                background={`${open||scroll?'bg-primary':'bg-primaryWhite'}`}
                minWidth={`${open?'max-w-[280px] ml-12 ':'max-w-[150px]'}`}
                /></>}
@@ -185,7 +185,7 @@ useEffect(()=>{
                marginTop='mt-0'
                onClick={() => setShowModal(true)}
                text="Login"
-               textColor={`${open||scroll?'text-white':'text-[#9966ff]'}`}
+               textColor={`${open||scroll?'text-white':'text-primary'}`}
                background={`${open||scroll?'bg-primary':'bg-primaryWhite'}`}
                minWidth={`${open?'max-w-[280px] ml-12 ':'max-w-[150px]'}`}
                />
