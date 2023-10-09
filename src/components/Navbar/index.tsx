@@ -145,7 +145,7 @@ useEffect(()=>{
       {
         Links.map((link)=>(
           <li key={link.name} style={{textDecoration:'none'}} className='md:ml-8 text-xl md:my-0 my-7 '>
-            <Link style={{textDecoration:'none'}}  href={link.link} className={`${open||scroll?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-[#96f]  duration-500`}><h1>{link.name}</h1></Link>
+            <Link style={{textDecoration:'none'}}  href={link.link} className={`${open||scroll?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-primary  duration-500`}><h1>{link.name}</h1></Link>
           </li>
         ))
       }
@@ -153,7 +153,7 @@ useEffect(()=>{
           <li className="md:ml-8 text-4xl md:my-0 my-7 ">
               <Link
                 href="/blog/"
-                className={`${open||scroll?'text-gray-800':'text-white'} cursor-pointer hover:text-[#96f]  duration-500`}
+                className={`${open||scroll?'text-gray-800':'text-white'} cursor-pointer hover:text-primary  duration-500`}
               >
                 <FaInstagram/>
               </Link>
@@ -161,7 +161,7 @@ useEffect(()=>{
           <li className="md:ml-8 md:my-0 my-7 text-4xl mr-4">
               <Link
                 href="/blog/"
-                className={`${open||scroll?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-[#96f]  duration-500`}
+                className={`${open||scroll?'text-gray-800 text-center':'text-white'}  cursor-pointer hover:text-primary  duration-500`}
                >
                   <FaFacebook/>
               </Link>

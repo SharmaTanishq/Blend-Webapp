@@ -82,7 +82,7 @@
 .line {
   height: 2px;
   flex: 1 1 0%;
-  background-color: #96f;
+  background-color: #CE0141;
 }
 
 .social-message .message {
@@ -109,7 +109,7 @@
 
 
  .icon:hover {
-  color:#96f;
+  color:#CE0141;
   transition: all 0.2s ease-in;
 }
 
