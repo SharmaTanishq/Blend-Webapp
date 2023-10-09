@@ -19,7 +19,7 @@ const index = (props: Props) => {
     flex 
     flex-col
     justify-center 
-    items-center pt-[18vh] md:mt-20 pb-5'>
+    items-center pt-[12vh] md:mt-9 pb-5'>
       <div className='infoHolder max-w-7xl mb-7'>
         <Intro />        
       </div>     
