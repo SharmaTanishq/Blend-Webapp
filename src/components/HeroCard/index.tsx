@@ -8,6 +8,7 @@ type Props = {
   backgroundImage:string;
   logoVisible:Boolean;
   logoIcon:number;
+  logoColor:string|null;
   logoBackground:string;
   isSongVisible:Boolean;
   songName:string;
@@ -28,21 +29,21 @@ const index = (props: Props) => {
   const icon =(selection:number) =>{
     if(selection === 1){
       return (<>
-        <FaRegHeart/>
+        <FaRegHeart className={`${props.logoColor?props.logoColor:"text-white"}`}/>
       </>)
     } if(selection === 2){
       return (<>
-        <BiPlus/>
+        <BiPlus className={`${props.logoColor?props.logoColor:"text-white"}`}/>
       </>)
     }
     if(selection === 3){
       return (<>
-        <BsBookmark/>
+        <BsBookmark className={`${props.logoColor?props.logoColor:"text-white"}`}/>
       </>)
     }
     return (
     <div className='mb-1 ml-1'>
-      <VscSend className='-rotate-45 	'/>
+      <VscSend className={`${props.logoColor?props.logoColor:"text-white"} -rotate-45`}/>
     </div>
     )
   }
@@ -66,8 +67,8 @@ const index = (props: Props) => {
         <div className={`${styles.playerContainer} rounded pl-2 pr-3 pt-1 pb-1` }>
           <img className={`${styles.playerImg} mr-3`} src={props.songArtistImage}></img>
           <div className={`${styles.infoContainer} flex flex-col justify-center`}>
-            <h6 className='mb-1'>Chosen</h6>
-            <h6>Blxst, Ty Dolla $ign</h6>
+            <h6 className='mb-1'>{props.songName}</h6>
+            <h6>{props.songArtistName}</h6>
           </div>
         </div>
       </div>
@@ -87,11 +88,11 @@ const index = (props: Props) => {
 
       {/* Toggle to enable/disable the Artist Top Container */}
 
-      {props.isArtistBottomVisible?
+      {props.isArtistTopVisible?
         <div className={styles.artistContainerTop}>
           <div className={` rounded-full flex bg-white justify-center items-center	pl-2 pr-3 pt-1 pb-1 ` }>
-            <img className={`${styles.artistImg} mr-2`} src='https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg' height={30} width={30}></img>
-            <span className='font-medium'>Doja Cat</span>
+            <img className={`${styles.artistImg} mr-2`} src={props.artistImage} height={30} width={30}></img>
+            <span className='font-medium'>{props.songArtistName}</span>
           </div>
         </div>:null
        }
@@ -101,8 +102,8 @@ const index = (props: Props) => {
        {props.isArtistBottomVisible?
         <div className={styles.artistContainer}>
           <div className={` rounded-full flex bg-white justify-center items-center	 pl-2 pr-3 pt-1 pb-1 ` }>
-            <img className={`${styles.artistImg} mr-2`} src='https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg' height={30} width={30}></img>
-            <span>KAYTRANADA</span>
+            <img className={`${styles.artistImg} mr-2`} src={props.artistImage} height={30} width={30}></img>
+            <span>{props.songArtistName}</span>
           </div>
         </div>:null
        }
@@ -113,8 +114,8 @@ const index = (props: Props) => {
        {props.isFestVisible?
         <div className={styles.artistContainer}>
           <div className={` ${styles.festContainer} flex bg-white justify-center items-center	 pl-1 pr-3 pt-1 pb-1 ` }>
-            <img className={`${styles.festImage} mr-2`} src='https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg' height={25} width={25}></img>
-            <span className={`font-semibold`}>Festival</span>
+            <img className={`${styles.festImage} mr-2`} src={props.festImage} height={25} width={25}></img>
+            <span className={`font-semibold`}>{props.festTag}</span>
           </div>
         </div>:null
       }

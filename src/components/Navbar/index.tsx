@@ -278,7 +278,7 @@ useEffect(()=>{
                          
                         </div>
                         <div className="w-full  text-center no-underline mt-3 ">
-                            <a rel="noopener noreferrer" className = 'text-[#9966ff] text-sm font-bold no-underline' href="#">Forgot Password ?</a>
+                            <a rel="noopener noreferrer" className = 'text-primary text-sm font-bold no-underline' href="#">Forgot Password ?</a>
                         </div>
                         <div className='w-full  items-center justify-center flex'>
                           <Button text='Login' onClick={()=>loginFunction()}></Button>
@@ -301,7 +301,7 @@ useEffect(()=>{
                         </button>
                       </div>
                         <p className="signup mt-2">Don't have an account? 
-                          <span style={{textDecoration:'none',cursor:'pointer'}} onClick={()=>setSignedInPage(!signedInPage)} className="text-[#9966ff] font-bold "> Sign up</span>
+                          <span style={{textDecoration:'none',cursor:'pointer'}} onClick={()=>setSignedInPage(!signedInPage)} className="text-primary font-bold "> Sign up</span>
                         </p>
                   </div>
                  

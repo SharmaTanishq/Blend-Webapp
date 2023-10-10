@@ -38,10 +38,11 @@ const index = (props: Props) => {
             />
           </h1>
         </div>
-        <div className='absolute text-white text-center lg:text-left flex flex-col justify-center items-center  lg:left-[-5rem] lg:top-[10px] h-full'>
+        <div className='absolute w-full text-white  text-center left-[38rem] flex justify-center items-center h-full'>
          
           <h1 className={`${styles.exploreStrokeText} text-[6.1rem] lg:text-8xl font-semibold`}>
-         Coming Soon
+         Coming <br/>
+          Soon
           </h1>
         </div>
       </div>
