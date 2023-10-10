@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ImageTwo from '../../../public/sample.png'
+import ImageTwo from '../../../public/Artist.png'
 import styles from './meetsimilar.module.css'
 import { Button } from '@/components'
 type Props = {}

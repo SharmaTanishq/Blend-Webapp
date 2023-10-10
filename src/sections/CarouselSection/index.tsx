@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import ImageTwo from '../../../public/sample.png'
+import ImageTwo from '../../../public/SampleTwo.png'
 import styles from './index.module.css'
 import { Button } from '@/components'
 

@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily:{
+
+    },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -36,6 +39,9 @@ module.exports = {
       '8xl': '6.5rem',
     },
     extend: {
+      maxWidth:{
+
+      },
       boxShadow:{
         'custom':" 0px 4px 12px rgba(0, 0, 0, 0.1)"
       },

@@ -16,7 +16,7 @@ const index = (props: Props) => {
     <>
     <footer className=" flex justify-center items-center w-full py-8 text-center text-sm  p-5 h-auto">
         <div className='flex flex-col lg:flex-row  max-w-7xl max-h-80 h-full min-h-[324px] justify-between items-center min-w-[60%]'>
-          <div className='text-white text-4xl'>Blend</div>
+          <div className='text-white text-4xl'>Peach</div>
           <div><Subscribe/></div>
           <div className='flex text-white text-3xl'>
             <FaInstagram className='mr-5'/>

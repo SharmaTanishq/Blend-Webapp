@@ -34,7 +34,7 @@ const index = (props: Props) => {
               }}
             />
     </h1>
-    <h3 className='text-xl text-white font-semibold mb-2'>
+    <h3 className='text-2xl text-white font-semibold mb-2'>
         Ready to find your Ride or Die?
     </h3>
     <div className='w-full flex justify-center items-center max-w-md pl-4 pr-4 md:pl-0 md:pr-0'>

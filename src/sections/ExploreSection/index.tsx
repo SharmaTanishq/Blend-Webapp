@@ -14,7 +14,7 @@ const index = (props: Props) => {
         </h1>
         <h4 className=' text-xl font-bold lg:max-w-none' >Meet IRL at curated concerts, parties and music festival </h4>
       </div>
-      <div className='flex flex-col justify-center items-center mb-5 relative h-[600px] max-w-7xl w-full ml-auto mr-auto px-7 lg:px-0'>
+      <div className='flex flex-col justify-around items-center mb-5 relative h-[600px] max-w-7xl w-full ml-auto mr-auto px-7 lg:px-0'>
         <img className='rounded-3xl object-cover h-[600px] mb-4' src='https://www.beatmatch.app/static/media/events-party.cd1193dc2322b22e8b46.gif' width={'100%'}  ></img>
         <div className='absolute text-white text-center lg:text-left flex flex-col justify-center items-center  lg:left-[-5rem] lg:top-[10px] h-full'>
           <h1 className='text-[6.1rem] lg:text-8xl font-semibold'>Explore</h1>
@@ -36,6 +36,12 @@ const index = (props: Props) => {
                 return instance;
               }}
             />
+          </h1>
+        </div>
+        <div className='absolute text-white text-center lg:text-left flex flex-col justify-center items-center  lg:left-[-5rem] lg:top-[10px] h-full'>
+         
+          <h1 className={`${styles.exploreStrokeText} text-[6.1rem] lg:text-8xl font-semibold`}>
+         Coming Soon
           </h1>
         </div>
       </div>

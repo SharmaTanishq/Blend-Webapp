@@ -38,7 +38,9 @@ const index = (props: Props) => {
   const [newEmail,setNewEmail] = useState('');
   const [errorMssg,setErrorMssg] = useState('');
 
-  const [getMe,{error:error_me,loading:loading_me}] = useLazyQuery(ME_QUERY);
+  const [getMe,{error:error_me,loading:loading_me}] = useLazyQuery(ME_QUERY,{
+    fetchPolicy:'no-cache'
+  });
   const [login,{data,error,loading}] = useMutation(LOGIN_MUTATION);
   const [isLoggedIn,setIsLoggedIn] = useState(false);
 
@@ -83,19 +85,21 @@ useEffect(()=>{
       variables:{
         "input":{
         "email":email,
-        "password":password }
+        "password":password 
+      }
       }
     }).then((result)=>{
       if(result.data){
-         getMe().then(res=>setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
+        
+        getMe().then(res=>setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
       }
     }).catch(e=>setErrorMssg(e.message))
         
   }
 
   useEffect(()=>{
-    getMe().then(res=>setLoggedInUser(res?.data?.me));
-    
+    // getMe().then(res=>setLoggedInUser(res?.data?.me));
+    // getMe().then(res=>console.log('res',res.data.me))
   },[])
 
   useEffect(()=>{
@@ -112,10 +116,12 @@ useEffect(()=>{
           return false
       } return true
   }
-
-
+  useEffect(()=>{
+    console.log(isSpotifyConnected());
+  },[])
+  const ConnectSpotifyURL = process.env.CONNECT_SPOTIFY_URL;
   const connectSpotify =  async ()=>{
-    await fetch('http://localhost:4000/connectSpotify',{ 
+    await fetch('http://localhost:4000/connectSpotify' ,{ 
       method: 'GET', redirect: 'follow',credentials:'include'})                               
                                 .then((data:any)=>{
                                   router.push(data.url)
@@ -129,9 +135,9 @@ useEffect(()=>{
       <div className={`md:flex max-w-7xl mx-auto items-center justify-between ${open?'bg-white':'bg-none'} py-4 md:px-10 px-7 transition-all duration-500 ease-in `}>
         <div className='font-bold text-2xl cursor-pointer flex items-center
       text-gray-800'>
-          <span className={`text-3xl ${open||scroll?'text-gray-800 text-center':'text-white'} font-semibold mr-1 pt-2`}>
+          <span className={`text-4xl ${open||scroll?'text-gray-800 text-center':'text-white'} font-bold tracking-wider	 mr-1 pt-2`}>
           
-          Blend
+          Peach
           </span>
         
         </div>
@@ -168,7 +174,10 @@ useEffect(()=>{
            </li>
            </div>
            {isLoggedIn?<>
-              {isSpotifyConnected()?<> Hi, {loggedInUser.name}</>:<> <ButtonSecondary 
+           {console.log('isSpotifyConnected',isSpotifyConnected())}
+              {isSpotifyConnected()?
+              <> Hi, {loggedInUser.name}</>:
+              <> <ButtonSecondary 
                marginBottom='mb-0'
                marginTop='mt-0'
                onClick={() => connectSpotify()}
@@ -176,7 +185,9 @@ useEffect(()=>{
                textColor={`${open||scroll?'text-white':'text-primary'}`}
                background={`${open||scroll?'bg-primary':'bg-primaryWhite'}`}
                minWidth={`${open?'max-w-[280px] ml-12 ':'max-w-[150px]'}`}
-               /></>}
+               />
+               </>
+               }
            </>
            :<>
 
@@ -184,10 +195,10 @@ useEffect(()=>{
                marginBottom='mb-0'
                marginTop='mt-0'
                onClick={() => setShowModal(true)}
-               text="Login"
+               text="Join the club"
                textColor={`${open||scroll?'text-white':'text-primary'}`}
                background={`${open||scroll?'bg-primary':'bg-primaryWhite'}`}
-               minWidth={`${open?'max-w-[280px] ml-12 ':'max-w-[150px]'}`}
+               minWidth={`${open?'max-w-[300px] ml-12 ':'max-w-[180px]'}`}
                />
                </>}
             
@@ -202,7 +213,7 @@ useEffect(()=>{
                
                 <div className=" bg-[#EBEAF5] flex items-center justify-between p-5 border-b-2 border-solid border-primary rounded-t-3xl">
                   <h3 className="text-3xl font-semibold text-black">
-                    {signedInPage? "Sign Up":"Login"}
+                    {signedInPage? "Sign Up":"Join the club"}
                   </h3>
                   
                   <button
@@ -242,7 +253,7 @@ useEffect(()=>{
                      
                      
                         <p className="signup mt-2">Already have an account? 
-                          <span style={{textDecoration:'none',cursor:'pointer'}} onClick={()=>setSignedInPage(!signedInPage)} className="text-[#9966ff] font-bold "> Login</span>
+                          <span style={{textDecoration:'none',cursor:'pointer'}} onClick={()=>setSignedInPage(!signedInPage)} className="text-[#9966ff] font-bold "> Join the club</span>
                         </p>
                   </div>
                  

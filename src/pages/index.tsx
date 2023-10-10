@@ -34,16 +34,16 @@ const Index = () => {
 
       <section className='pt-3 pb-5'><MeetSimilarSection/></section>
 
-      <section className='pt-1 pb-1 bg-primary'>
+      {/* <section className='pt-1 pb-1 bg-primary'>
         <MarqueeBanner 
         textColor='text-white '
         textOne='Music lovers only!'
         textTwo='Music lovers only!'
         />
-        </section>
+        </section> */}
       <section className='bg-white'> <CarouselSection/> </section>
 
-      <section className='pt-5 pb-3'> <ExploreSection/> </section>
+      <section id='explore' className='pt-5 pb-3'> <ExploreSection/> </section>
 
       <section className='pt-1 pb-1 bg-white'>
         <MarqueeBanner

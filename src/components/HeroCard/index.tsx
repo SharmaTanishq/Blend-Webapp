@@ -64,7 +64,7 @@ const index = (props: Props) => {
      { props.isSongVisible? 
         <div className={styles.bottomRightPlayer}>
         <div className={`${styles.playerContainer} rounded pl-2 pr-3 pt-1 pb-1` }>
-          <img className={`${styles.playerImg} mr-3`} src='https://www.beatmatch.app/static/media/highlights-blxst-chosen.ebb29c5925e63dd2a7f3.jpeg'></img>
+          <img className={`${styles.playerImg} mr-3`} src={props.songArtistImage}></img>
           <div className={`${styles.infoContainer} flex flex-col justify-center`}>
             <h6 className='mb-1'>Chosen</h6>
             <h6>Blxst, Ty Dolla $ign</h6>
