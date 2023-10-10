@@ -8,7 +8,7 @@ type Props = {
   backgroundImage:string;
   logoVisible:Boolean;
   logoIcon:number;
-  logoColor:string|null;
+  logoColor?:string|null;
   logoBackground:string;
   isSongVisible:Boolean;
   songName:string;

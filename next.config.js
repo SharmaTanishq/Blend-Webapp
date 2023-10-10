@@ -13,7 +13,13 @@ module.exports = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   basePath: '',
-  webpack:(config,options)=>{
+  webpack:(config,{ buildId, dev, isServer, defaultLoaders, webpack })=>{
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+   }))
     config.module.rules.push({
       test: /\.(graphql|gql)/,
       exclude: /node_modules/,
