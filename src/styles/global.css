@@ -29,11 +29,12 @@ a:hover {
 }
 .owl-dots button.owl-dot.active span{
   
-  background-color: #CE0141;
+  background-color: rgb(206, 1, 65);
   border-radius: 50%;
   height: 18px;
   width: 18px;
   position: absolute;
+  box-shadow: rgba(206, 1, 65, 0.2) 0px 2px 2px 2px, rgba(206, 1, 65, 0.3) 0px 0px 0px 3px;;
   
 } 
 .owl-dots button.owl-dot:hover span,
