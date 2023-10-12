@@ -9,6 +9,8 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head />
+        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"/>
+        <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"></link>
         <body>
           <Main />
           <NextScript />
