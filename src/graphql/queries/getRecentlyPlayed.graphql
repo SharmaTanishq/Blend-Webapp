@@ -1,0 +1,25 @@
+query GetRecentlyPlayed($limit: Float!) {
+  getRecentlyPlayed(limit: $limit) {
+    songName
+    artist {
+      name
+      href
+      type
+    }
+    albumArtists {
+      name
+      href
+      type
+    }
+    previewUrl
+    href
+    duration
+    isExplicit
+    images {
+      height
+      url
+      width
+    }
+    playedAt
+  }
+}

@@ -41,6 +41,7 @@ const index = (props: Props) => {
   const [getMe,{error:error_me,loading:loading_me}] = useLazyQuery(ME_QUERY,{
     fetchPolicy:'no-cache'
   });
+
   const [login,{data,error,loading}] = useMutation(LOGIN_MUTATION);
   const [isLoggedIn,setIsLoggedIn] = useState(false);
 
@@ -65,6 +66,7 @@ useEffect(()=>{
   },[])
 
   const loginFunction = ()=>{
+    
     login({
       variables:{
         "input":{
@@ -72,6 +74,7 @@ useEffect(()=>{
         "password":password }
       }
     }).then((result)=>{
+      
       if(result.data){
          getMe().then(res=>          
           setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
@@ -98,8 +101,7 @@ useEffect(()=>{
   }
 
   useEffect(()=>{
-    // getMe().then(res=>setLoggedInUser(res?.data?.me));
-    // getMe().then(res=>console.log('res',res.data.me))
+    getMe().then(res=>setLoggedInUser(res?.data?.me));    
   },[])
 
   useEffect(()=>{
@@ -116,10 +118,9 @@ useEffect(()=>{
           return false
       } return true
   }
-  useEffect(()=>{
-    console.log(isSpotifyConnected());
-  },[])
+  
   const ConnectSpotifyURL = process.env.CONNECT_SPOTIFY_URL;
+  
   const connectSpotify =  async ()=>{
     await fetch('http://localhost:4000/connectSpotify' ,{ 
       method: 'GET', redirect: 'follow',credentials:'include'})                               
@@ -174,7 +175,7 @@ useEffect(()=>{
            </li>
            </div>
            {isLoggedIn?<>
-           {console.log('isSpotifyConnected',isSpotifyConnected())}
+           
               {isSpotifyConnected()?
               <> Hi, {loggedInUser.name}</>:
               <> <ButtonSecondary 

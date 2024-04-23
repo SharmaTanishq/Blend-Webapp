@@ -36,7 +36,7 @@ const index = (props: Props) => {
       
        <OwlCarousel 
        responsive={responsive}
-      loop
+       loop
        autoPlay
        autoplaySpeed={1}
        className='p-0 m-0'

@@ -1,0 +1,16 @@
+query GetFollowedArtist {
+  getFollowedArtist {
+    artistName
+    followers {
+      total
+      href
+    }
+    genres
+    href
+    images {
+      height
+      url
+      width
+    }
+  }
+}

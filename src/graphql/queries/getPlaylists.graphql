@@ -1,0 +1,22 @@
+query GetUserPlaylists {
+  getUserPlaylists {
+    playListId
+    name
+    tracks {
+      href
+      total
+    }
+    href
+    description
+    playListId
+    owner {
+      name
+      href
+    }
+    images {
+      height
+      url
+      width
+    }
+  }
+}

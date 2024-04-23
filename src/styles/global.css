@@ -56,6 +56,25 @@ background: white;
  position: relative;
 }
 
+.rhap_progress-bar-show-download{
+  background-color: white !important;
+  border-radius: 20px
+}
+
+.rhap_progress-indicator{
+  background: white !important;
+  width: 14px !important;
+  height: 14px !important;
+  top:-5px !important
+}
+.rhap_progress-bar .rhap_progress-filled .rhap_download-progress{
+  border-radius: 20px !important;
+}
+.rhap_controls-section{
+  margin-right: 0px !important;
+  margin-bottom:0px !important;
+}
+
 .content ul {
   @apply my-6;
 }
