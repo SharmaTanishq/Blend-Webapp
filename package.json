@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.2",
+    "@apollo/experimental-nextjs-app-support": "^0.10.0",
     "@types/aos": "^3.0.4",
     "@types/react-slick": "^0.23.10",
     "@types/spotify-web-api-node": "^5.0.7",

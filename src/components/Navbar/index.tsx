@@ -4,11 +4,10 @@ import {FaInstagram , FaFacebook, FaGoogle} from 'react-icons/fa'
 import {FaBars,FaTimes} from "react-icons/fa"
 import {IoMdClose,IoMdWarning} from "react-icons/io"
 import { Button, ButtonSecondary } from '..'
-import router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import LOGIN_MUTATION from '@mutations/login.graphql'
 import ME_QUERY from '@queries/getMe.graphql'
-import UseAnimations from 'react-useanimations'
-import visibility2 from 'react-useanimations/lib/visibility2'
+
 import { useLazyQuery, useMutation, useQuery } from '@apollo/client'
 
 
@@ -76,8 +75,9 @@ useEffect(()=>{
     }).then((result)=>{
       
       if(result.data){
-         getMe().then(res=>          
-          setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
+        getMe().then(res=>console.log('res',res))
+        //  getMe().then(res=>          
+        //   setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
       }
     }).catch(e=>setErrorMssg(e.message))
         
@@ -93,8 +93,8 @@ useEffect(()=>{
       }
     }).then((result)=>{
       if(result.data){
-        
-        getMe().then(res=>setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
+        getMe().then(res=>console.log('res'))
+        //getMe().then(res=>setLoggedInUser(res.data.me)).then(()=>setShowModal(!showModal));
       }
     }).catch(e=>setErrorMssg(e.message))
         
