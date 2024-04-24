@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import GET_MY_PLAYLIST from '@queries/getPlaylists.graphql'
-import img404 from '../../../public/image404.jpeg'
+import Image from "next/image";
 type Props = {};
 
 const index = (props: Props) => {
@@ -18,19 +18,20 @@ const index = (props: Props) => {
     <>
     {playlists.map((item:any)=>(
       <div className="relative  w-full h-[90px] overflow-hidden  rounded-lg mt-2 ">
-      <img
+      <Image
          //@ts-ignore
-        src={item.images?item.images[0].url:img404}
+        src={item.images?item.images[0].url:'/public/image404jpg'}
+        alt="Playlist"
         className="w-full h-full absolute blur-xl "
-      ></img>
+      ></Image>
       <div className="absolute  flex p-1 ml-2 w-full h-full ">
         <div className="w-1/4 flex justify-center items-center">
-          <img
+          <Image
             className=" w-auto  h-[60px]  drop-shadow-lg rounded-lg"
              //@ts-ignore
-            src={item.images?item.images[0].url:img404}            
+            src={item.images?item.images[0].url:'/public/image404jpg'}            
             alt="img"
-          ></img>
+          ></Image>
           <p className="font-semibold text-sm ml-2 tex-whtie">{item.name}</p>
         </div>
 

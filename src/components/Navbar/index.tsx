@@ -47,7 +47,7 @@ const index = (props: Props) => {
 
   const [signedInPage,setSignedInPage] = useState(false);
   const [loggedInUser,setLoggedInUser] = useState<any>()
-  const clientId = '956ec6db33ed420fb4472decd763df02';
+  
   
   const changeNav = () =>{
     if(window.scrollY >=80){
@@ -119,10 +119,11 @@ useEffect(()=>{
       } return true
   }
   
-  const ConnectSpotifyURL = process.env.CONNECT_SPOTIFY_URL;
+  
   
   const connectSpotify =  async ()=>{
-    await fetch('http://localhost:4000/connectSpotify' ,{ 
+    //@ts-ignore
+    await fetch(process.env.CONNECT_SPOTIFY_URL ,{ 
       method: 'GET', redirect: 'follow',credentials:'include'})                               
                                 .then((data:any)=>{
                                   router.push(data.url)

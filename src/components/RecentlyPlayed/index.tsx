@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Get_RECENTLY_PLAYED from "@queries/getRecentlyPlayed.graphql";
 import { useQuery } from "@apollo/client";
+import Image from "next/image";
 import { Song } from "@/@types/songs";
-import img404 from "../../../public/image404.jpeg";
-import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
+
 import "./player.module.css";
-import PlayIcon from "@/utils/Icons/Play";
-import PauseIcon from "@/utils/Icons/Pause";
+
 import { Player } from "..";
 
 type Props = {};
@@ -33,18 +32,19 @@ const index = (props: Props) => {
   ) : (
     <div className="flex w-1/2 justify-center pr-5 pl-5 items-center relative">
       <div className="relative bg-none w-[380px] h-[150px] overflow-hidden  rounded-2xl">
-        <img
+        <Image
           //@ts-ignore
-          src={song?.images ? song.images[0]?.url! : img404}
+          src={song?.images ? song.images[0]?.url! : '/public/image404jpg'}
+          alt="Recently Played"
           className="w-full h-full absolute blur-xl "
-        ></img>
+        ></Image>
         <div className="absolute flex p-3 w-full h-full justify-center items-center">
-          <img
+          <Image
             className="rounded-2xl w-auto max-w-[120px] h-full drop-shadow-lg"
             //@ts-ignore
-            src={song?.images ? song.images[0]?.url! : img404}
+            src={song?.images ? song.images[0]?.url! : '/public/image404jpg'}
             alt="img"
-          ></img>
+          ></Image>
 
           <div className="flex-col rounded w-full min-w-[150px] pl-2  justify-center items-center ">
             <div className="flex flex-col  text-white bg-none text-center whitespace-nowrap text-ellipsis">

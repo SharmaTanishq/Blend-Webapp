@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import GET_TOP_SONGS from '@queries/getTopSongs.graphql'
 import { Song } from "@/@types/songs";
-import img404 from '../../../public/image404.jpeg'
+
 import Marquee from "react-fast-marquee";
 import { Player } from "..";
 
@@ -27,7 +27,7 @@ const index = (props: Props) => {
       <div className="m-4 relative bg-none w-[250px] h-[350px] overflow-hidden  rounded-xl ">
       <img
         //@ts-ignore
-        src={item.images?item.images[0]?.url:img404}
+        src={item.images?item.images[0]?.url:'/public/image404jpg'}
         className="w-full h-full absolute blur-xl "
       ></img>
       <div className="absolute flex flex-col p-3 w-full h-full justify-start items-center">
@@ -35,7 +35,7 @@ const index = (props: Props) => {
           className=" w-auto max-w-[170px] h-full max-h-[200px] mt-2 drop-shadow-lg"
           //@ts-ignore
           //@ts-ignore
-          src={item.images?item.images[0]?.url:img404}
+          src={item.images?item.images[0]?.url:'/public/image404jpg'}
           alt="img"
         ></img>
 

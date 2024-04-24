@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import GET_FOLLOWED_ARTIST from '@queries/getFollowedArtists.graphql'
 import { useQuery } from "@apollo/client";
 import { Artist } from "@/@types/artists";
 
-import img404 from '../../../public/image404.jpeg'
+
 type Props = {};
 
 const index = (props: Props) => {
@@ -22,10 +23,11 @@ const index = (props: Props) => {
       <>
       {artist?.map(item=>(
         <div className="flex flex-col items-center m-3 shadow">
-          <img
+          <Image
             className="rounded-full w-[150px] h-[150px]"
             //@ts-ignore
-            src={item.images?item.images[0]?.url:img404}        
+            src={item.images?item.images[0]?.url:'/public/image404jpg'} 
+            alt="Followed Artists"       
           />
          <div className="mt-7 justify-center items-center w-full">
           <p className="text-white font-semibold text-center">{item.artistName}</p>
