@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import GET_TOP_SONGS from '@queries/getTopSongs.graphql'
 import { Song } from "@/@types/songs";
-
+import {Spinner} from "@nextui-org/spinner";
 import Marquee from "react-fast-marquee";
 import { Player } from "..";
 import Image from "next/image";
@@ -22,7 +22,7 @@ const index = (props: Props) => {
 
   if(error){<>Not Able to Fetch top songs</>}
 
-  return loading && data?<>Loading...</>:(
+  return loading?(<div className=" flex w-full justify-center items-center"><Spinner/></div>):(
     <div className="flex">
     {songs.map(item=><>
       <div className="m-4 relative bg-none w-[250px] h-[350px] overflow-hidden  rounded-xl ">

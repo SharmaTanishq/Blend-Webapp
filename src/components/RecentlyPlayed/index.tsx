@@ -3,7 +3,7 @@ import Get_RECENTLY_PLAYED from "@queries/getRecentlyPlayed.graphql";
 import { useQuery } from "@apollo/client";
 import Image from "next/image";
 import { Song } from "@/@types/songs";
-
+import {Spinner} from "@nextui-org/spinner";
 import "./player.module.css";
 
 import { Player } from "..";
@@ -28,8 +28,8 @@ const index = (props: Props) => {
 
   if (error) <></>;
 
-  return loading && data ? (
-    <>loading...</>
+  return loading ? (
+    <div className="flex pr-5 pl-5 w-[380px] justify-center items-center"><Spinner/></div>
   ) : (
     <div className="flex w-1/2 justify-center pr-5 pl-5 items-center relative">
       <div className="relative  w-[380px] h-[170px] overflow-hidden  rounded-2xl ">

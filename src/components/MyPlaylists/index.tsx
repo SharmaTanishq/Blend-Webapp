@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 import GET_MY_PLAYLIST from '@queries/getPlaylists.graphql'
 import Image from "next/image";
+import {Spinner} from '@nextui-org/react'
 type Props = {};
 
 const index = (props: Props) => {
@@ -14,7 +15,7 @@ const index = (props: Props) => {
     }    
     console.log(playlists)
   },[loading])
-  return loading?<>loading...</>: (
+  return loading?<><Spinner/></>: (
     <>
     {playlists.map((item:any)=>(
       <div className="relative  w-full h-[90px] overflow-hidden  rounded-lg mt-2 ">

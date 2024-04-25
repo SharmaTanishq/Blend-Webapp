@@ -10,7 +10,7 @@ const index = (props: Props) => {
   return (
     <>
       <AudioPlayer
-                  
+                  autoPlay={false}
                   layout="stacked-reverse"
                   src={props.previewUrl}
                   hasDefaultKeyBindings={false}

@@ -3,7 +3,7 @@ import Image from "next/image";
 import GET_FOLLOWED_ARTIST from '@queries/getFollowedArtists.graphql'
 import { useQuery } from "@apollo/client";
 import { Artist } from "@/@types/artists";
-
+import {Spinner} from "@nextui-org/spinner";
 
 type Props = {};
 
@@ -19,7 +19,7 @@ const index = (props: Props) => {
 
   if(error){<div className="text-white">No followed Artist</div>}
   return (
-    loading?<>loading...</>:
+    loading?<div className="flex flex-col items-center m-3 shadow"><Spinner/></div>:
       <>
       {artist?.map(item=>(
         <div className="flex flex-col items-center m-3 shadow">

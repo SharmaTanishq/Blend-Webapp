@@ -2,7 +2,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaInstagram, FaFacebook, FaGoogle } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { IoMdClose, IoMdWarning } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+import {Spinner} from "@nextui-org/spinner";
 import { Button, ButtonSecondary } from "..";
 import { useRouter } from "next/router";
 import LOGIN_MUTATION from "@mutations/login.graphql";
@@ -111,6 +112,7 @@ const index = (props: Props) => {
   }, [loggedInUser]);
 
   const isSpotifyConnected = () => {
+    
     if (loggedInUser && !loggedInUser.spotifyId) {
       return false;
     }
@@ -219,9 +221,9 @@ const index = (props: Props) => {
               </Link>
             </li>
           </div>
-          {isLoggedIn ? (
+          {isLoggedIn  ? (
             <>
-              {isSpotifyConnected() ? (
+              {isSpotifyConnected()  ? (
                 <li>
                 <Link
                   href="/me/"
@@ -233,10 +235,11 @@ const index = (props: Props) => {
                   
                   <p style={{textDecoration:'none'}}>Hi, {loggedInUser.name}</p>
                 </Link>
+                
                 </li>
               ) : (
                 <>
-                  {loading?<>loading</>:<ButtonSecondary
+                  <ButtonSecondary
                     marginBottom="mb-0"
                     marginTop="mt-0"
                     onClick={() => connectSpotify()}
@@ -250,14 +253,15 @@ const index = (props: Props) => {
                     minWidth={`${
                       open ? "max-w-[280px] ml-12 " : "max-w-[150px]"
                     }`}
-                  />}
+                  />
                   
                 </>
               )}
             </>
           ) : (
+            
             <>
-              <ButtonSecondary
+            {loading_me? <Spinner/> :<ButtonSecondary
                 marginBottom="mb-0"
                 marginTop="mt-0"
                 onClick={() => setShowModal(true)}
@@ -267,7 +271,8 @@ const index = (props: Props) => {
                   open || scroll ? "bg-primary" : "bg-primaryWhite"
                 }`}
                 minWidth={`${open ? "max-w-[300px] ml-12 " : "max-w-[180px]"}`}
-              />
+              />}
+             
             </>
           )}
 
