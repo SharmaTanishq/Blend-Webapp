@@ -3,10 +3,15 @@ import Link from 'next/link';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 import { Button, FollowedArtist, MyPlaylists, MyProfileCard, RecentlyPlayed, TopSongs } from '@/components';
-import Karan from '../../public/images/bdkaran.webp'
-import Image from 'next/image';
+
 import Marquee from 'react-fast-marquee';
-const Blog = () => (
+const Blog = () => {
+
+  const handleLogout=()=>{
+    localStorage.removeItem('logged_in_user')
+  }
+
+  return(
   <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
     <div className='mx-auto max-w-screen'>
       <section className='h-4/6 md:mt-20 '>
@@ -16,7 +21,7 @@ const Blog = () => (
                 <div className='flex justify-center flex-col w-1/2'>
                   <h1 className='text-[3.4rem] max-w-sm leading-none lg:text-[4rem] lg:max-w-none  text-white font-semibold '>Welcome, Tanishq</h1>
                   <p className='text-lg text-white  mt-2 ml-3'>Access and update your account information easily</p>
-                  <Button text='Logout' ></Button>
+                  <Button text='Logout' onClick={handleLogout} ></Button>
                 </div>
                 <RecentlyPlayed/>
               </div>
@@ -84,7 +89,7 @@ const Blog = () => (
     </div>
 
    
-  </Main>
-);
+  </Main>)
+};
 
 export default Blog;

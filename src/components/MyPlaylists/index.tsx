@@ -21,6 +21,8 @@ const index = (props: Props) => {
       <Image
          //@ts-ignore
         src={item.images?item.images[0].url:'/public/image404jpg'}
+        width={300}
+        height={300}
         alt="Playlist"
         className="w-full h-full absolute blur-xl "
       ></Image>
@@ -29,7 +31,10 @@ const index = (props: Props) => {
           <Image
             className=" w-auto  h-[60px]  drop-shadow-lg rounded-lg"
              //@ts-ignore
-            src={item.images?item.images[0].url:'/public/image404jpg'}            
+            src={item.images?item.images[0].url:'/public/image404jpg'}   
+            width={300}
+            
+            height={300}        
             alt="img"
           ></Image>
           <p className="font-semibold text-sm ml-2 tex-whtie">{item.name}</p>

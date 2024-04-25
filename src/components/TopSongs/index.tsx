@@ -5,6 +5,7 @@ import { Song } from "@/@types/songs";
 
 import Marquee from "react-fast-marquee";
 import { Player } from "..";
+import Image from "next/image";
 
 type Props = {};
 
@@ -25,19 +26,27 @@ const index = (props: Props) => {
     <div className="flex">
     {songs.map(item=><>
       <div className="m-4 relative bg-none w-[250px] h-[350px] overflow-hidden  rounded-xl ">
-      <img
+      <Image
         //@ts-ignore
-        src={item.images?item.images[0]?.url:'/public/image404jpg'}
+        src={item.images?item.images[0]?.url:'images/image404.jpg'}
+        //@ts-ignore
+        width={300}
+        //@ts-ignore
+        height={300}
         className="w-full h-full absolute blur-xl "
-      ></img>
+      ></Image>
       <div className="absolute flex flex-col p-3 w-full h-full justify-start items-center">
-        <img
+        <Image
           className=" w-auto max-w-[170px] h-full max-h-[200px] mt-2 drop-shadow-lg"
+          
           //@ts-ignore
+          src={item.images?item.images[0]?.url:'images/image404.jpg'}
+           //@ts-ignore
+          width={300}
           //@ts-ignore
-          src={item.images?item.images[0]?.url:'/public/image404jpg'}
+          height={ 300}
           alt="img"
-        ></img>
+        ></Image>
 
         <div className="flex rounded w-auto h-full min-w-[150px] pl-2 pr-3 justify-center items-center ">
           <div className="flex flex-col  text-white bg-none text-center whitespace-nowrap text-ellipsis">

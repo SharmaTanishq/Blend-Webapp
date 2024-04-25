@@ -25,8 +25,12 @@ const index = (props: Props) => {
         <div className="flex flex-col items-center m-3 shadow">
           <Image
             className="rounded-full w-[150px] h-[150px]"
-            //@ts-ignore
-            src={item.images?item.images[0]?.url:'/public/image404jpg'} 
+            // @ts-ignore
+            src={item.images?item.images[0]?.url:'images/image404.jpg'} 
+            width={300}
+            
+            height={300}
+            
             alt="Followed Artists"       
           />
          <div className="mt-7 justify-center items-center w-full">
