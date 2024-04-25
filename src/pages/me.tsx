@@ -12,7 +12,7 @@ const Blog = () => {
   }
 
   return(
-  <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
+  <Main meta={<Meta title="Me" description="Me" />}>
     <div className='mx-auto max-w-screen'>
       <section className='h-4/6 md:mt-20 '>
           {/* Profile Picture */}                
