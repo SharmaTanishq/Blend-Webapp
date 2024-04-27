@@ -24,7 +24,7 @@ export type UserPayload ={
     name:string
     email:string,
     spotifyId:string,
-    _id?:string
+    _id:string
   };
   [Types.RemoveUser]:{
     name:string
