@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaInstagram, FaFacebook, FaGoogle } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -10,6 +10,8 @@ import LOGIN_MUTATION from "@mutations/login.graphql";
 import ME_QUERY from "@queries/getMe.graphql";
 
 import { useLazyQuery, useMutation, useQuery } from "@apollo/client";
+import { AppContext } from "@/context";
+import { Types } from "@/context/actionType";
 
 type Props = {};
 
@@ -25,11 +27,11 @@ const index = (props: Props) => {
 
   const [scroll, setScroll] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
-  const [email, setEmail] = useState("");
+  const {state,dispatch} = useContext(AppContext)
+  const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setPasswordVisibility] = useState(true);
-
+  
   const [newUserName, setNewUserName] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [newEmail, setNewEmail] = useState("");
@@ -74,7 +76,9 @@ const index = (props: Props) => {
       .then((result) => {
         if (result.data) {
           getMe()
-            .then((res) => setLoggedInUser(res.data.me))
+            .then((res) => {
+              dispatch({type:Types.AddUser,payload:res.data.me}),
+              setLoggedInUser(res.data.me)})
             .then(() => setShowModal(!showModal));
         }
       })
@@ -100,7 +104,9 @@ const index = (props: Props) => {
   };
 
   useEffect(() => {
-    getMe().then((res) => setLoggedInUser(res?.data?.me));
+    getMe().then((res) => {
+      
+      setLoggedInUser(res?.data?.me)});
   }, []);
 
   useEffect(() => {
@@ -108,6 +114,7 @@ const index = (props: Props) => {
 
     if (loggedInUser) {
       setIsLoggedIn(true);
+      dispatch({type:Types.AddUser,payload:loggedInUser})
     }
   }, [loggedInUser]);
 

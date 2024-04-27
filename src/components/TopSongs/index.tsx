@@ -15,7 +15,7 @@ const index = (props: Props) => {
   useEffect(()=>{
     if(loading === false){
       setSongs(data.getTopSongs)    
-      console.log(songs[0])  
+       
     }
     
   },[loading])
@@ -24,8 +24,8 @@ const index = (props: Props) => {
 
   return loading?(<div className=" flex w-full justify-center items-center"><Spinner/></div>):(
     <div className="flex">
-    {songs.map(item=><>
-      <div className="m-4 relative bg-none w-[250px] h-[350px] overflow-hidden  rounded-xl ">
+    {songs.map((item,index)=>(
+      <div className="m-4 relative bg-none w-[250px] h-[350px] overflow-hidden  rounded-xl  " key={index}>
       <Image
         //@ts-ignore
         src={item.images?item.images[0]?.url:'images/image404.jpg'}
@@ -33,6 +33,7 @@ const index = (props: Props) => {
         width={300}
         //@ts-ignore
         height={300}
+        alt=""
         className="w-full h-full absolute blur-xl "
       ></Image>
       <div className="absolute flex flex-col p-3 w-full h-full justify-start items-center">
@@ -62,7 +63,7 @@ const index = (props: Props) => {
         </div>
       </div>
     </div>
-    </>)}
+    ))}
     
     </div>
   );

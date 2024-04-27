@@ -8,9 +8,10 @@ type Props = {
 
 const index = (props: Props) => {
   return (
-    <>
+    
       <AudioPlayer
                   autoPlay={false}
+                  autoPlayAfterSrcChange={false}
                   layout="stacked-reverse"
                   src={props.previewUrl}
                   hasDefaultKeyBindings={false}
@@ -24,10 +25,10 @@ const index = (props: Props) => {
                     pause: <PauseIcon/>,
                   }}
                   customAdditionalControls={[]} 
-                  onPlay={(e) => console.log("onPlay")}
+                 
                   // other props here
                 />
-    </>
+    
   )
 }
 

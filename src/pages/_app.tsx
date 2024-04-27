@@ -11,15 +11,16 @@ import 'react-h5-audio-player/lib/styles.css';
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { AppProvider } from '@/context';
 
 
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   
   <ApolloProvider client={client}>
-
+    <AppProvider>
       <Component {...pageProps} />
-  
+    </AppProvider>
   </ApolloProvider>
 );
 

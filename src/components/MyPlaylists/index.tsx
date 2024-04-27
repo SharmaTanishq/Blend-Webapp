@@ -13,12 +13,12 @@ const index = (props: Props) => {
     if(loading === false){
       setPlaylists(data.getUserPlaylists)  
     }    
-    console.log(playlists)
+    
   },[loading])
   return loading?<><Spinner/></>: (
     <>
-    {playlists.map((item:any)=>(
-      <div className="relative  w-full h-[90px] overflow-hidden  rounded-lg mt-2 ">
+    {playlists.map((item:any,index)=>(
+      <div className="relative  w-full h-[90px] overflow-hidden  rounded-lg mt-2 " key={index}>
       <Image
          //@ts-ignore
         src={item.images?item.images[0].url:'/public/image404jpg'}

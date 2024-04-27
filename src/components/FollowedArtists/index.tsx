@@ -21,10 +21,10 @@ const index = (props: Props) => {
   return (
     loading?<div className="flex flex-col items-center m-3 shadow"><Spinner/></div>:
       <>
-      {artist?.map(item=>(
-        <div className="flex flex-col items-center m-3 shadow">
+      {artist?.map((item,index)=>(
+        <div className="flex  flex-col items-center m-3 shadow" key={index}>
           <Image
-            className="rounded-full w-[150px] h-[150px]"
+            className="rounded-full sm:w-[150px] sm:h-[150px] w-[130px] h-[130px]"
             // @ts-ignore
             src={item.images?item.images[0]?.url:'images/image404.jpg'} 
             width={300}
