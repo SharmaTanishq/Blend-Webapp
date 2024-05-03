@@ -24,8 +24,8 @@ const index = (props: Props) => {
   const marqueeRef = useRef(null);
 
   const down = useParallax({
-    translateY: ["-100px", "4000px"],
-    scale: [1, 1.55],
+    translateY: ["0", "100"],
+    scale: [1, 1.15],
     speed: 500,
     easing: "easeInQuad",
   });

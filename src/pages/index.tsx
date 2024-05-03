@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Footer, MarqueeBanner, Navbar } from '@/components';
+import { Footer, LoginModal, MarqueeBanner, Navbar } from '@/components';
 import { CarouselSection, ExploreSection, HeroSection, MeetSimilarSection, SectionReversed } from '@/sections';
 
 
@@ -29,7 +29,7 @@ const Index = () => {
       }
     >
      <div className="mx-auto max-w-screen bg-[rgb(20 18 18)]">     
-
+        <LoginModal/>
       <section className='h-4/6 	'><HeroSection/></section>
 
       <section className='p-2 md:p-8 '><MeetSimilarSection/></section>

@@ -24,28 +24,8 @@ const responsive = {
 };
 
 const index = (props: Props) => {
-  const [scrollY, setScrollY] = React.useState(0);
-
-  // React.useEffect(()=>{
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY);
-  //   };
-
-  //   // just trigger this so that the initial state 
-  //   // is updated as soon as the component is mounted
-  //   // related: https://stackoverflow.com/a/63408216
-  //   handleScroll();
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-
-  // },[])
-  // useEffect(()=>{
-  //   console.log("SCROLL",scrollY)
-  // },[scrollY])
-
+  
+  
 
   const mobileScreenRef = useRef(null);
   const leftToRight = useParallax({

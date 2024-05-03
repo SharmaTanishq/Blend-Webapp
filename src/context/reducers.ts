@@ -1,5 +1,5 @@
-import {  USER_ACTIONS } from "./actionType";
-import {  UserType } from ".";
+import {  MODAL_ACTIONS, USER_ACTIONS } from "./actionType";
+import {  ModalType, UserType } from ".";
 
 
 
@@ -24,4 +24,19 @@ import {  UserType } from ".";
         return state
     }
 
+  }
+
+  export const modalReducer = (state:ModalType,action:MODAL_ACTIONS)=>{
+    switch(action.type){
+      case "MODAL_OPEN":
+        return {
+          isOpen:action.payload.isOpen
+        }
+        case "MODAL_CLOSE":
+        return {
+          isOpen:false
+        }
+        default:
+        return state
+    }
   }

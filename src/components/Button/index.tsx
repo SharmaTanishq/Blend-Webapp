@@ -1,15 +1,17 @@
 import React from 'react'
 
 type Props = {
-  text:string
+  text:string,
+  animate?:boolean,
   onClick?:()=>void
 }
 
 const index = (props: Props) => {
   return (
     <button 
+    {...props}
     data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
+    data-aos-anchor-placement={`${props.animate?"top-center":""}`}
     type='button'
     onClick={props.onClick}
     className='max-w-sm 

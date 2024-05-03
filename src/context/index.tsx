@@ -1,49 +1,38 @@
 import React, { ReactNode, createContext, useReducer } from "react";
-import {
+import { modalReducer, userReducer } from "./reducers";
+import { MODAL_ACTIONS, USER_ACTIONS } from "./actionType";
 
-  userReducer,
-} from "./reducers";
-import {
-  
-  USER_ACTIONS,
-} from "./actionType";
-
-
-
-export type UserType={
-  name:string;
-  email:string;
-  spotifyId:string;
-  _id:string;
-  
-}
-
-type InitialStateType = {
- 
-  user:UserType
+export type UserType = {
+  name: string;
+  email: string;
+  spotifyId: string;
+  _id: string;
+};
+export type ModalType = {
+  isOpen: Boolean;
 };
 
-const initialState = {  
-  user:{} as UserType
-  
+type InitialStateType = {
+  user: UserType;
+  modal: ModalType;
+};
+
+const initialState = {
+  user: {} as UserType,
+  modal: { isOpen: false } as ModalType,
 };
 
 const AppContext = createContext<{
   state: InitialStateType;
-  dispatch: React.Dispatch<
-    USER_ACTIONS
-  >;
+  dispatch: React.Dispatch<USER_ACTIONS|MODAL_ACTIONS>;
 }>({
   state: initialState,
   dispatch: () => null,
 });
 
-const mainReducer = (
-  { user }: InitialStateType,
-  action: USER_ACTIONS
-) => ({
-  
-  user:userReducer(user,action as USER_ACTIONS)
+const mainReducer = ({ user,modal }: InitialStateType, action: USER_ACTIONS|MODAL_ACTIONS) => ({
+  user: userReducer(user, action as USER_ACTIONS),
+  modal:modalReducer(modal,action as MODAL_ACTIONS)
 });
 
 const AppProvider: React.FC<BaseLayoutProps> = ({ children }) => {
