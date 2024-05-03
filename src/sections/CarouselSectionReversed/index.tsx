@@ -67,28 +67,28 @@ const index = (props: Props) => {
   });
   return (
     <div className={`${styles.csContainer} relative `} ref={mobileScreenRef}>
-      <div className="absolute top-4 left-3 md:left-20 md:top-1/4"   data-aos="fade-in" data-aos-anchor-placement="center-center"  data-aos-duration="2000">
+      <div className="absolute top-4 left-3 md:left-20 md:top-3/3"   data-aos="fade-in" data-aos-anchor-placement="top-center"  data-aos-duration="2000">
       
       <Image
-          className="rounded-3xl relative left-6 -top-2s md:top-10 md:bottom-10 max-w-[100px] md:max-w-none "
+          className="rounded-3xl relative left-6 -top-2s md:top-10 md:bottom-10 max-w-[120px] h-full  object-cover md:max-w-none "
           width={150}
           height={150}
           
-          src={"https://i.scdn.co/image/ab67616d0000b273bb25239324c4e16ae01fda36"}
+          src={"images/Shinda.JPG"}
           alt="prophec"
         ></Image>
         <Image
-          className="rounded-3xl left-10 top-2 md:right-10 md:top-10 md:bottom-20 relative max-w-[100px] md:max-w-none"
+          className="rounded-3xl left-10 top-2 md:right-10 md:top-16 md:bottom-20 relative max-w-[100px] md:max-w-none"
           width={150}
           height={150}
-          src={"https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/53/fc/12/53fc12dd-e441-88b0-b539-b5e4728bb5c9/198391098505.jpg/1200x1200bf-60.jpg"}
+          src={"images/Obsessed.jpg"}
           alt="prophec"
         ></Image>
          <Image
-          className="rounded-3xl left-2 top-5 md:right-5 md:top-20 md:bottom-20 relative max-w-[100px] md:max-w-none"
+          className="rounded-3xl left-2 top-5 md:left-16 md:top-20 md:bottom-20 relative max-w-[100px] md:max-w-none"
           width={150}
           height={150}
-          src={"https://m.media-amazon.com/images/I/51HG9xnTdaL._UXNaN_FMjpg_QL85_.jpg"}
+          src={"images/Gurinder.jpeg"}
           alt="prophec"
         ></Image>
         

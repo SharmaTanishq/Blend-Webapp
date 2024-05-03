@@ -97,7 +97,7 @@ const index = (props: Props) => {
     >
       <div
         className={`md:flex max-w-7xl mx-auto items-center justify-between rounded-full	 backdrop-blur		 ${
-          open ? "bg-white" : "bg-white  "
+          open ? "bg-secondary" : "bg-secondary  "
         } py-0 md:py-1 md:px-1 px-7 transition-all duration-500 ease-in `}
       >
         <div
@@ -107,7 +107,7 @@ const index = (props: Props) => {
           <Link href={"/"} className="no-underline  hover:no-underline">
             <span
               className={`text-4xl transition-all duration-500 ${
-                open || scroll ? "text-primary text-center" : "text-gray-800"
+                open || scroll ? "text-primary text-center" : "text-primary"
               } font-bold tracking-wider	 ml-5 pt-2 no-underline  hover:no-underline`}
             >
               Peach
