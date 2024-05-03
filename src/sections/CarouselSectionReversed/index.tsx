@@ -24,45 +24,52 @@ const responsive = {
 };
 
 const index = (props: Props) => {
+  
+  const [isMobile,setIsMobile] = React.useState(false)
   const [scrollY, setScrollY] = React.useState(0);
 
-  // React.useEffect(()=>{
-  //   const handleScroll = () => {
-  //     setScrollY(window.scrollY);
-  //   };
+  React.useEffect(()=>{
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-  //   // just trigger this so that the initial state 
-  //   // is updated as soon as the component is mounted
-  //   // related: https://stackoverflow.com/a/63408216
-  //   handleScroll();
+    
+    console.log(isMobile)
+    // just trigger this so that the initial state 
+    // is updated as soon as the component is mounted
+    // related: https://stackoverflow.com/a/63408216
+    handleScroll();
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
 
-  // },[])
-  // useEffect(()=>{
-  //   console.log("SCROLL",scrollY)
-  // },[scrollY])
+  },[])
+  useEffect(()=>{
+    const isMobile = screen.width < 500;
+    setIsMobile(isMobile)
+  },[])
+
 
 
   const mobileScreenRef = useRef(null);
+
   const leftToRight = useParallax({
-    translateX: ["80", "0"],
-    speed: 1,
-    startScroll:680,
-    endScroll:2000,
+    translateX: ["-200", "0"],
+    translateY: ["200", "0"],
+    
+    startScroll:1545,
+    endScroll:isMobile?2300:3000,
     
     easing: "easeOutQuad",
-
     shouldAlwaysCompleteAnimation:true,
   });
   return (
-    <div className={`${styles.csContainer} relative`} ref={mobileScreenRef}>
-      <div className="absolute top-4 left-3 md:left-1/2 md:top-1/4 "   data-aos="fade-in" data-aos-anchor-placement="center-center"  data-aos-duration="2000">
+    <div className={`${styles.csContainer} relative `} ref={mobileScreenRef}>
+      <div className="absolute top-4 left-3 md:left-20 md:top-1/4"   data-aos="fade-in" data-aos-anchor-placement="center-center"  data-aos-duration="2000">
       
-        <Image
+      <Image
           className="rounded-3xl relative left-6 -top-2s md:top-10 md:bottom-10 max-w-[100px] md:max-w-none "
           width={150}
           height={150}
@@ -86,7 +93,7 @@ const index = (props: Props) => {
         ></Image>
         
       </div>
-      <div className="flex flex-col-reverse md:flex md:flex-row h-[75vh] w-full justify-center items-center text-white backdrop-blur-sm ">
+      <div className="flex flex-col-reverse md:flex md:flex-row-reverse h-[75vh] w-full justify-center items-center text-white backdrop-blur-sm">
         <div
           className={`flex flex-col md:w-1/2 max-w-xl  text-left px-6 pt-10 lg:px-0 lg:pt-0`}
         >
@@ -95,15 +102,14 @@ const index = (props: Props) => {
             data-aos-anchor-placement="center-center"
             className="text-[1.5rem] md:text-[2.5rem] lg:text-[3.5rem]  leading-tight	font-bold	mb-4	"
           >
-            Match based on music you stream
+           Break the ice  with music
           </h1>
           <p
             data-aos="fade-up"
             data-aos-anchor-placement="center-center"
             className="text-xl	font-normal leading-snug"
           >
-            Stream music from Spotify and Apple Music and we find your perfect
-            match for you. Find friends and community through music.
+            Show off your personality by highlighting your favorite songs, artists, and albums and watch the DMs roll in.
           </p>
           <Button text="Join the club" />
         </div>
@@ -113,7 +119,7 @@ const index = (props: Props) => {
         >
           <Image
             ref={leftToRight.ref as React.RefObject<HTMLImageElement>}
-            src={"/images/mockUpHome.png"}
+            src={"/images/mockUpTwo.png"}
             height={400}
             width={400}
             alt="Image"

@@ -7,7 +7,7 @@ class MyDocument extends Document {
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
-      <Html lang={AppConfig.locale}>
+      <Html lang={AppConfig.locale} style={{scrollBehavior:'smooth'}}> 
         <Head />
         <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css"/>
         <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"></link>

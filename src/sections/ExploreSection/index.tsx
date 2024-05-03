@@ -6,7 +6,7 @@ type Props = {}
 
 const index = (props: Props) => {
   return (
-    <div className='min-h-section-height flex flex-col justify-center items-center '>
+    <div className='min-h-section-height flex flex-col justify-center items-center mt-32 md:mt-0 '>
       <div className='flex justify-center items-center flex-col text-white text-center mb-4 px-7 lg:px-0   '>
         <h1 className='text-4xl lg:text-[3.5rem] font-semibold'>
           Hate saying
@@ -14,9 +14,9 @@ const index = (props: Props) => {
         </h1>
         <h4 className=' text-xl font-bold lg:max-w-none' >Meet IRL at curated concerts, parties and music festival </h4>
       </div>
-      <div className='flex flex-col justify-around items-center mb-5 relative h-[600px] max-w-7xl w-full ml-auto mr-auto px-7 lg:px-0'>
+      <div className='flex flex-col justify-around items-center mb-5 relative h-[600px] max-w-7xl w-full ml-auto mr-auto px-7 md:px-0'>
         <img className='rounded-3xl object-cover h-[600px] mb-4' src='https://www.beatmatch.app/static/media/events-party.cd1193dc2322b22e8b46.gif' width={'100%'}  ></img>
-        <div className='absolute text-white text-center lg:text-left flex flex-col justify-center items-center  lg:left-[-5rem] lg:top-[10px] h-full'>
+        <div className='absolute text-white text-center lg:text-left flex flex-col justify-center items-center  md:-left-14 md:top-[10px] h-full'>
           <h1 className='text-[6.1rem] lg:text-8xl font-semibold'>Explore</h1>
           <h1 className='text-[6.1rem] lg:text-8xl font-semibold'>events</h1>
           <h1 className={`${styles.exploreStrokeText} text-[6.1rem] lg:text-8xl font-semibold`}>
@@ -38,9 +38,9 @@ const index = (props: Props) => {
             />
           </h1>
         </div>
-        <div className='absolute w-full text-white  text-center left-[38rem] flex justify-center items-center h-full'>
+        <div className='absolute w-full text-white  text-center left-[34rem] flex justify-center items-center h-full'>
          
-          <h1 className={`${styles.exploreStrokeText} text-[6.1rem] lg:text-8xl font-semibold`}>
+          <h1 className={`${styles.exploreStrokeText} text-[6.1rem] md:text-8xl font-semibold`}>
          Coming <br/>
           Soon
           </h1>

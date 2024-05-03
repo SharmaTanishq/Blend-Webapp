@@ -1,12 +1,10 @@
 const {nextui} = require("@nextui-org/react");
-
+const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}', "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    fontFamily:{
-
-    },
+    
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -41,6 +39,9 @@ module.exports = {
       '8xl': '6.5rem',
     },
     extend: {
+      fontFamily:{
+        sans:["var(--font-poppins)", ...defaultTheme.fontFamily.sans]
+      },
       maxWidth:{
 
       },
@@ -72,8 +73,10 @@ module.exports = {
         },
       
         primary:"#CE0141",
+        secondary:"#FFEAF0",
+        secondaryRGBA:"rgba(255, 234, 240, 0.8)",
         primaryWhite:"#fff",
-        background:"#060710",
+        background:"#0F0F0F",
         error:"#B00020"
       },
     },

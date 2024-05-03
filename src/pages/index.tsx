@@ -9,13 +9,13 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Footer, MarqueeBanner, Navbar } from '@/components';
-import { CarouselSection, ExploreSection, HeroSection, MeetSimilarSection } from '@/sections';
+import { CarouselSection, ExploreSection, HeroSection, MeetSimilarSection, SectionReversed } from '@/sections';
 
 
 
 
 const Index = () => {
-  useEffect(()=>{AOS.init();},[])
+  useEffect(()=>{AOS.init({duration:500});},[])
   const router = useRouter();
   
   
@@ -28,21 +28,24 @@ const Index = () => {
         />
       }
     >
-     <div className="mx-auto max-w-screen">     
+     <div className="mx-auto max-w-screen bg-[rgb(20 18 18)]">     
 
-      <section className='h-4/6	'><HeroSection/></section>
+      <section className='h-4/6 	'><HeroSection/></section>
 
-      <section className='pt-3 pb-5'><MeetSimilarSection/></section>
+      <section className='p-2 md:p-8 '><MeetSimilarSection/></section>
 
+      
+      <section > <CarouselSection/> </section>
       {/* <section className='pt-1 pb-1 bg-primary'>
         <MarqueeBanner 
         textColor='text-white '
         textOne='Music lovers only!'
-        textTwo='Music lovers only!'
+        textTwo='Find your Vibe '
         />
-        </section> */}
-      <section className='bg-white'> <CarouselSection/> </section>
+      </section> */}
 
+
+      <section > <SectionReversed/> </section>
       <section id='explore' className='pt-5 pb-3'> <ExploreSection/> </section>
 
       <section className='pt-1 pb-1 bg-white'>

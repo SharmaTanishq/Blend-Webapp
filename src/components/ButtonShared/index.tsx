@@ -18,12 +18,12 @@ const index = (props: Props) => {
     className={`
     ${props.minWidth} 
     w-full 
-    max-h-11 
+    max-h-14 
     flex 
     justify-center 
     items-center
     ${props.background}
-    h-11 
+    h-14 
     rounded-full
     ${props.textColor}
     font-semibold

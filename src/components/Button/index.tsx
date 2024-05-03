@@ -8,6 +8,8 @@ type Props = {
 const index = (props: Props) => {
   return (
     <button 
+    data-aos="fade-up"
+          data-aos-anchor-placement="center-center"
     type='button'
     onClick={props.onClick}
     className='max-w-sm 
@@ -23,7 +25,8 @@ const index = (props: Props) => {
     text-white
     font-semibold
     mb-4
-    mt-6
+    mt-16
+    md:mt-6
     '>
       {props.text}
     </button>
