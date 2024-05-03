@@ -186,7 +186,7 @@ const index = (props: Props) => {
                   <Link
                     href="/me/"
                     className={`${
-                      open || scroll ? "text-black" : "text-white"
+                      open || scroll ? "text-gray-800" : "text-gray-800"
                     } cursor-pointer text-xl font-semibold hover:text-primary duration-500 hover:no-underline `}
                     style={{ textDecoration: "none" }}
                   >
