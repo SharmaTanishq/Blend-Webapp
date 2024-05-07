@@ -93,11 +93,11 @@ const index = (props: Props) => {
   return (
     <nav
       data-aos="fade-down"
-      className={`  w-full fixed top-0 left-0 z-[999] transition-all duration-500 ease-in mt-7 md:px-0 px-3   		`}
+      className={`  w-full fixed top-0 left-0 z-[10] transition-all duration-500 ease-in mt-7 md:px-0 px-3   		`}
     >
       <div
-        className={`md:flex max-w-7xl mx-auto items-center justify-between rounded-full	 backdrop-blur		 ${
-          open ? "bg-secondary" : "bg-secondary  "
+        className={`md:flex max-w-7xl mx-auto items-center justify-between rounded-full	 backdrop-blur	md:bg-secondary	 ${
+          open ? "bg-none" : "bg-none  "
         } py-0 md:py-1 md:px-1 px-7 transition-all duration-500 ease-in `}
       >
         <div
@@ -106,9 +106,9 @@ const index = (props: Props) => {
         >
           <Link href={"/"} className="no-underline  hover:no-underline">
             <span
-              className={`text-4xl transition-all duration-500 ${
-                open || scroll ? "text-primary text-center" : "text-primary"
-              } font-bold tracking-wider	 ml-5 pt-2 no-underline  hover:no-underline`}
+              className={`text-3xl md:text-4xl transition-all duration-500 ${
+                open || scroll ? "md:text-primary text-secondary text-center" : "md:text-primary text-secondary"
+              } font-bold tracking-wider	 md:ml-5 md:pt-2 no-underline  hover:no-underline`}
             >
               Peach
             </span>
@@ -117,15 +117,15 @@ const index = (props: Props) => {
 
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-3 cursor-pointer md:hidden"
+          className="text-3xl absolute right-8 top-1 cursor-pointer md:hidden"
         >
           {/* <ion-icon name={open ? 'close':'menu'}></ion-icon> */}
           {open ? (
-            <div className="text-primary">
+            <div className="text-primary bg-secondary p-2 rounded-full text-2xl">
               <FaTimes />
             </div>
           ) : (
-            <div className={`${scroll ? "text-primary" : "text-primary"}`}>
+            <div className={`${scroll ? "text-primary" : "text-primary"} bg-secondary p-2 rounded-full text-2xl`}>
               <FaBars />
             </div>
           )}
@@ -133,7 +133,7 @@ const index = (props: Props) => {
 
         <ul
           className={` md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-50 left-0 w-full justify-end md:pl-0  transition-all duration-500 ease-in ${
-            open ? "top-20 bg-white rounded-md" : "top-[-490px] "
+            open ? "top-20 bg-secondary rounded-md" : "top-[-490px] "
           }`}
         >
           {Links.map((link) => (
