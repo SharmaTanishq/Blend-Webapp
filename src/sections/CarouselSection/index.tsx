@@ -7,7 +7,7 @@ import { Button, MarqueeBanner } from "@/components";
 
 import { useParallax } from "react-scroll-parallax";
 
-type Props = {};
+
 
 const responsive = {
   0: {
@@ -23,9 +23,9 @@ const responsive = {
   },
 };
 
-const index = (props: Props) => {
+const index = (data: any) => {
   
-  
+  console.log(data)
 
   const mobileScreenRef = useRef(null);
   const leftToRight = useParallax({
@@ -75,15 +75,14 @@ const index = (props: Props) => {
             data-aos-anchor-placement="center-center"
             className="text-[1.5rem] md:text-[2.5rem] lg:text-[3.5rem]  leading-tight	font-bold	mb-4	"
           >
-            Match based on music you stream
+           {data.data.heading}
           </h1>
           <p
             data-aos="fade-up"
             data-aos-anchor-placement="center-center"
             className="text-xl	font-normal leading-snug"
           >
-            Stream music from Spotify and Apple Music and we find your perfect
-            match for you. Find friends and community through music.
+             {data.data.sub_heading}
           </p>
           <Button text="Join the club" />
         </div>
@@ -93,7 +92,7 @@ const index = (props: Props) => {
         >
           <Image
             ref={leftToRight.ref as React.RefObject<HTMLImageElement>}
-            src={"/images/mockUpHome.png"}
+            src={data.data.main_image.data.attributes.url}
             height={400}
             width={400}
             alt="Image"

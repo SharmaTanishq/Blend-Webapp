@@ -23,7 +23,7 @@ const responsive = {
   },
 };
 
-const index = (props: Props) => {
+const index = (data: any) => {
   
   const [isMobile,setIsMobile] = React.useState(false)
   const [scrollY, setScrollY] = React.useState(0);
@@ -34,7 +34,7 @@ const index = (props: Props) => {
     };
 
     
-    console.log(isMobile)
+    
     // just trigger this so that the initial state 
     // is updated as soon as the component is mounted
     // related: https://stackoverflow.com/a/63408216
@@ -102,14 +102,14 @@ const index = (props: Props) => {
             data-aos-anchor-placement="center-center"
             className="text-[1.5rem] md:text-[2.5rem] lg:text-[3.5rem]  leading-tight	font-bold	mb-4	"
           >
-           Break the ice  with music
+            {data.data.heading}
           </h1>
           <p
             data-aos="fade-up"
             data-aos-anchor-placement="center-center"
             className="text-xl	font-normal leading-snug"
           >
-            Show off your personality by highlighting your favorite songs, artists, and albums and watch the DMs roll in.
+             {data.data.sub_heading}
           </p>
           <Button text="Join the club" />
         </div>
@@ -119,7 +119,7 @@ const index = (props: Props) => {
         >
           <Image
             ref={leftToRight.ref as React.RefObject<HTMLImageElement>}
-            src={"/images/mockUpTwo.png"}
+            src={data.data.main_image.data.attributes.url}
             height={400}
             width={400}
             alt="Image"

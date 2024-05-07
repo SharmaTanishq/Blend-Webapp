@@ -1,20 +1,22 @@
 import React, { useRef } from "react";
 import { HeroCard, Intro } from "../../components";
-import {
-  carousel,
-  carouselOne,
-  carouselTwo,
-  carousel_two,
-} from "../../../public/carousel";
+
 import Marquee from "react-fast-marquee";
 import styles from "./index.module.css";
 import { useParallax } from "react-scroll-parallax";
 
-type Props = {};
+type Props = {
+  data:any
+};
 
 const index = (props: Props) => {
   const target = useRef(null);
 
+  const carousel_one  = props.data.data.filter((item:any)=>{return item.id <=8 && item.id >= 1})
+  const carousel_1  = props.data.data.filter((item:any)=>{return item.id <=16 && item.id >= 9})
+  const carousel_two  = props.data.data.filter((item:any)=>{return item.id <=24 && item.id >= 17})
+  const carousel_2  = props.data.data.filter((item:any)=>{return item.id <=32 && item.id >= 18})
+  
   const train = useParallax({
     speed: 230,
     translateY: ["-70px", "100px"],
@@ -60,11 +62,11 @@ const index = (props: Props) => {
             gradientWidth={50}
             className="pt-2 max-w-full overflow-hidden"
           >
-            {carousel.map((item, index) => (
-              <HeroCard {...item} key={index} />
+            {carousel_one.map((item:any, index:number) => (
+              <HeroCard data={item.attributes} key={index} />
             ))}
-            {carouselOne.map((item, index) => (
-              <HeroCard {...item} key={index} />
+            {carousel_1.map((item:any, index:number) => (
+              <HeroCard data={item.attributes} key={index} />
             ))}
           </Marquee>
 
@@ -76,11 +78,11 @@ const index = (props: Props) => {
             gradientWidth={50}
             className="pt-2 mt-4 max-w-full overflow-hidden"
           >
-            {carouselTwo.map((item, index) => (
-              <HeroCard {...item} key={index} />
+            {carousel_two.map((item:any, index:number) => (
+              <HeroCard data={item.attributes} key={index} />
             ))}
-            {carousel_two.map((item, index) => (
-              <HeroCard {...item} key={index} />
+            {carousel_2.map((item:any, index:number) => (
+              <HeroCard data={item.attributes} key={index} />
             ))}
           </Marquee>
         </div>

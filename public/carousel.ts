@@ -18,8 +18,7 @@ export const carousel = [
     "isFestVisible": false,
     "festTag": "Festival",
     "festImage": "https://www.beatmatch.app/static/media/highlights-kaytranada-2.a9f5a105a7868bcdc036.jpeg"
-  },
-  
+  },  
   {
     "backgroundImage":"images/Diljit.JPG",
     "logoVisible": false,
