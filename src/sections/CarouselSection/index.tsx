@@ -25,7 +25,7 @@ const responsive = {
 
 const index = (data: any) => {
   
-  console.log(data)
+  
 
   const mobileScreenRef = useRef(null);
   const leftToRight = useParallax({
